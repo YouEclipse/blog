@@ -1,0 +1,7 @@
+localhost:80
+
+encode zstd gzip
+root * ./public
+file_server browse 
+
+
