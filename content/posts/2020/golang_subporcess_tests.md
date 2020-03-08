@@ -1,6 +1,8 @@
 ---
 title: "理解 Golang 子进程测试"
 date: 2020-01-11T20:32:51+08:00
+tags: ["golang"]
+categories: ["golang"]
 draft: false
 ---
 

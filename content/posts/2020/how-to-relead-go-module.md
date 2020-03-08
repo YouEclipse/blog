@@ -1,6 +1,8 @@
 ---
 title: "如何优雅地发布 go module 模块到 pkg.go.dev"
 date: 2020-02-20T14:32:51+08:00
+tags: ["golang","go mod","pkg.go.dev"]
+categories: ["golang","go mod"]
 draft: false
 ---
 
