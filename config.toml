@@ -1,4 +1,3 @@
 baseURL = "https://blog.golang.im/"
 languageCode = "en-us"
 title = "CURD Boy 的碎碎念"
-theme = "hugo-theme-goblog"
