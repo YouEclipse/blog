@@ -94,13 +94,13 @@ enableEmoji = true
             defaultHiddenFromHomePage = false
         # Social Info in home page
         [languages.en.params.social]
-          GitHub = "https://github.com/YouEclipse"
+          GitHub = "YouEclipse"
           #Linkedin = "xxxx"
           #Twitter = "xxxx"
           #Instagram = "xxxx"
           Email = "chuiyouwu@gmail.com"
-          Facebook = "https://www.facebook.com/chuiyouwu"
-          Telegram = "https://t.me/YouEclipse"
+          Facebook = "chuiyouwu"
+          Telegram = "YouEclipse"
           # Medium = "xxxx"
           # Gitlab = "xxxx"
           #Youtubelegacy = "xxxx"
@@ -115,7 +115,7 @@ enableEmoji = true
           # FreeCodeCamp = "xxxx"
           # Bitbucket = "xxxx"
           # Stackoverflow = "xxxx"
-           Weibo = "https://www.weibo.com/yoyo940429"
+           Weibo = "yoyo940429"
           # Odnoklassniki = "xxxx"
           # VK = "xxxx"
           # Flickr = "xxxx"
@@ -268,7 +268,7 @@ enableEmoji = true
       # 网站关键词
       keywords = ["YouEclipse", "Hugo"]
       # 网站默认主题 ("light", "dark", "auto")
-      defaultTheme = "auto"
+      defaultTheme = "dark"
       # 主页信息设置
       [languages.zh-CN.params.home]
         # 主页个人信息
@@ -293,13 +293,13 @@ enableEmoji = true
           defaultHiddenFromHomePage = false
       # 主页的社交信息设置
       [languages.zh-CN.params.social]
-        GitHub = "https://github.com/YouEclipse"
+        GitHub = "YouEclipse"
         # Linkedin = "xxxx"
         #Twitter = "xxxx"
         #Instagram = "xxxx"
         Email = "chuiyouwu@gmail.com"
-        Facebook = "https://www.facebook.com/chuiyouwu"
-        Telegram = "https://t.me/YouEclipse"
+        Facebook = "chuiyouwu"
+        Telegram = "YouEclipse"
         # Medium = "xxxx"
         # Gitlab = "xxxx"
         # Youtubelegacy = "xxxx"
@@ -314,7 +314,7 @@ enableEmoji = true
         # FreeCodeCamp = "xxxx"
         # Bitbucket = "xxxx"
         # Stackoverflow = "xxxx"
-        Weibo = "https://www.weibo.com/yoyo940429"
+        Weibo = "yoyo940429"
         # Odnoklassniki = "xxxx"
         # VK = "xxxx"
         # Flickr = "xxxx"
@@ -587,7 +587,7 @@ enableEmoji = true
 # 作者信息
 [author]
   name = "YouEclipse"
-  link = "https://github.com/YouEclipse"
+  link = "YouEclipse"
 
 # Sitemap Info
 # 网站地图信息
