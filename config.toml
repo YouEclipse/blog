@@ -194,7 +194,7 @@ enableEmoji = true
           # Disqus Comment Config (https://disqus.com/)
           [languages.en.params.comment.disqus]
             # Disqus shortname to use Disqus in posts
-            shortname = "dillonzq"
+            shortname = "chuiyouwu"
           # Gittalk Comment Config (https://github.com/gitalk/gitalk)
           [languages.en.params.comment.gitalk]
             owner = ""
@@ -393,7 +393,7 @@ enableEmoji = true
         # Disqus 评论系统设置 (https://disqus.com/)
         [languages.zh-CN.params.comment.disqus]
           # Disqus 的用户名，用来在文章中启用 Disqus 评论系统
-          shortname = "YouEclipse"
+          shortname = "chuiyouwu"
         # Gittalk 评论系统设置 (https://github.com/gitalk/gitalk)
         [languages.zh-CN.params.comment.gitalk]
           owner = ""
@@ -587,7 +587,7 @@ enableEmoji = true
 # 作者信息
 [author]
   name = "YouEclipse"
-  link = "YouEclipse"
+  link = "https://github.com/YouEclipse"
 
 # Sitemap Info
 # 网站地图信息
