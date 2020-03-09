@@ -17,7 +17,7 @@ draft: false
 
 
 ## pkg.go.dev简介
-![](../../../static/images/blog/2020-02-20-01.png)
+![](https://blog.golang.im/images/blog/2020-02-20-01.png)
 [go.dev](https://go.dev) 是go官方团队于2019年11月上线的集合go开发资源的网站，包括一些学习课程和一些go的案例，当然最重要的就是提供了go的第三方包的检索功能。没错，他就是用来取代原来的[godoc.org](http://godoc.org)的，现在godoc.org上也有提示提醒用户迁移到pkg.go.dev。在这篇文章中，我们将把go module模块发布到pkg.go.dev。
 
 
@@ -59,7 +59,7 @@ go 1.13
 ```
 我们把代码push 到远端分支，看起来好像第一个版本就发布完毕了。我们打开`pkg.go.dev`搜索一下`github.com/YouEclipse/how-to-release-go-module`这个包，却返回未找到这个包。这是为何？
 
-![](../../../static/images/blog/2020-02-20-02.png)
+![](https://blog.golang.im/images/blog/2020-02-20-02.png)
 
 其实在go.dev的[about](https://go.dev/about)中说的很清楚了，只有通过`proxy.golang.org`下载包的时候，module才会自动同步到pkg.go.dev。
 
@@ -79,8 +79,8 @@ go: extracting github.com/YouEclipse/how-to-release-go-module v0.0.0-20200219150
 ```
 当我们成功拉取后，可以在pkg.go.dev再次搜索（具体可能需要等一段时间,大约是十分钟到半小时的样子），这时候我们可以看到搜索结果了
 
-![](../../../static/images/blog/2020-02-20-03.png)
-![](../../../static/images/blog/2020-02-20-04.png)
+![](https://blog.golang.im/images/blog/2020-02-20-03.png)
+![](https://blog.golang.im/images/blog/2020-02-20-04.png)
 看起来似乎我们的第一次发布大功告成了。我们看看pkg.go.dev包含了的什么信息：
 
 - 版本号：由go module自动生成
@@ -108,8 +108,8 @@ go: extracting github.com/YouEclipse/how-to-release-go-module v0.0.0-20200219150
 pkg.go.dev 支持的证书可以在[https://pkg.go.dev/license-policy](https://pkg.go.dev/license-policy)查看，我们只要选择合适的开源协议证书添加到项目中即可（很遗憾，WTFPL并不在支持的开源协议中）。这里我们选择Apache2.0协议，添加到项目中，并push 到远端分支。
 
 在等待一段时间（这里我等了大约30分钟）pkg.go.dev 更新后，我们会发现README和doc都可以正常显示了。这里生成的doc和godoc.org没太大的区别，都是基于代码和注释生成的，网上也有很多关于生成godoc最佳实践的文章，这里不做赘述。
-![](../../../static/images/blog/2020-02-20-05.png)
-![](../../../static/images/blog/2020-02-20-06.png)
+![](https://blog.golang.im/images/blog/2020-02-20-05.png)
+![](https://blog.golang.im/images/blog/2020-02-20-06.png)
 
 至此，发布的module包有godoc文档，有开源许可证，看起来是这么个样子，第一个版本至此就算发布完了。
 
@@ -121,7 +121,7 @@ git tag v1.0.0
 ```
 打上标签后push到远端分支，等待一段时间，我们就可以在pkg.go.dev上看到我们发布的v1.0.0版本了。
 
-![](../../../static/images/blog/2020-02-20-07.png)
+![](https://blog.golang.im/images/blog/2020-02-20-07.png)
 
 （这里有些奇怪，之前的v0.0.0消失了，不知道什么原因）
 
@@ -188,7 +188,7 @@ git push master
 ```
 在又等待了一段时间后(pkg.go.dev更新确实是有点慢)，可以看到v2版本已经发布了，
 
-![](../../../static/images/blog/2020-02-20-08.png)
+![](https://blog.golang.im/images/blog/2020-02-20-08.png)
 
 这时候我们尝试在之前的测试项目拉取更新
 ```
