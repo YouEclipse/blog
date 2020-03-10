@@ -12,7 +12,7 @@ theme = "LoveIt"
 
 # whether to use robots.txt
 # 是否使用 robots.txt
-enableRobotsTXT = false
+enableRobotsTXT = true
 # whether to use git commit log
 # 是否使用 git 信息
 enableGitInfo = true
@@ -133,7 +133,7 @@ enableEmoji = true
           # Hackernews = "xxxx"
           # Kickstarter = "xxxx"
           # Patreon = "xxxx"
-           Steam = "https://steamcommunity.com/id/jiangzhangzhe"
+           Steam = "jiangzhangzhe"
           # Twitch = "xxxx"
           # Strava = "xxxx"
           # Skype = "xxxx"
@@ -332,7 +332,7 @@ enableEmoji = true
         # Hackernews = "xxxx"
         # Kickstarter = "xxxx"
         # Patreon = "xxxx"
-        Steam = "https://steamcommunity.com/id/jiangzhangzhe"
+        Steam = "jiangzhangzhe"
         # Twitch = "xxxx"
         # Strava = "xxxx"
         # Skype = "xxxx"
@@ -488,7 +488,7 @@ enableEmoji = true
   # Publisher Info just for SEO
   # 出版者信息，仅用于 SEO
   [params.publisher]
-    name = "xxxx"
+    name = "YouEclipse"
     [params.publisher.logo]
       url = "logo.png"
       width = 127
