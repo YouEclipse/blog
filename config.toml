@@ -28,7 +28,7 @@ enableEmoji = true
     # language code
     languageCode = "en"
     # website title
-    title = "Not Only CURD"
+    title = "Gopher's thoughts"
     # language name
     languageName = "English"
     # whether to include Chinese/Japanese/Korean
@@ -227,7 +227,7 @@ enableEmoji = true
     # 网站语言
     languageCode = "zh-CN"
     # 网站标题
-    title = "不只是CURD"
+    title = "囊地鼠饲养员的碎碎念"
     # 语言名称
     languageName = "简体中文"
     # 是否包括中日韩文字
@@ -279,7 +279,7 @@ enableEmoji = true
           # 主页显示头像的 URL
           avatarURL = "/images/avatar.png"
           # 主页显示的网站副标题
-          subtitle = "除了CURD,还会点别的。"
+          subtitle = "囊地鼠🐭饲养员,偶尔搞搞鲸鱼🐳货运"
           # 是否为副标题显示打字机动画
           typeit = true
           # 是否显示社交账号
