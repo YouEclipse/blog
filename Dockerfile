@@ -26,19 +26,20 @@ ENV GIT_REPOSITORY=https://github.com/YouEclipse/blog.git
 ENV GIT_REPOSITORY_NAME=blog
 
 ENV THEME_GIT_REPOSITORY=https://github.com/dillonzq/LoveIt.git
+ENV THEME_GIT_BRANCH=v0.1.4
 ENV THEME_NAME=LoveIt
 
 RUN apk --no-cache add git
 
 WORKDIR /tmp
 
-RUN git clone ${GIT_REPOSITORY}  
+RUN git clone  ${GIT_REPOSITORY} 
 
 
 RUN cd ${GIT_REPOSITORY_NAME} \
     && mkdir themes \
     && cd /tmp/blog/themes \
-    && git clone ${THEME_GIT_REPOSITORY}
+    && git clone -b ${THEME_GIT_BRANCH} ${THEME_GIT_REPOSITORY}
 
 WORKDIR /tmp/blog
 
