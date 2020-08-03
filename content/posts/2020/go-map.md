@@ -1,9 +1,9 @@
 ---
-title: "[源码阅读]Go 1.14 Map"
+title: "[源码阅读] Go 1.14 Map"
 date: 2020-04-21T20:53:00+08:00
 tags: ["golang", "map", "源码"]
 categories: ["golang", "源码"]
-draft: true
+draft: false
 ---
 
 ## 前言
@@ -666,7 +666,9 @@ func hashGrow(t *maptype, h *hmap) {
 ### 如何扩容
 
 我们现在知道了 map 是何时触发扩容的，那么，map 是如何扩容的呢？
-map 扩容主要的函数是`growWork`和`evacuate`
+
+map 扩容主要的函数是`growWork`和`evacuate`，growWork 会在
+`mapassign`，`mapdelete` 时调用
 
 ```go
 func growWork(t *maptype, h *hmap, bucket uintptr) {
@@ -746,9 +748,13 @@ func evacuate(t *maptype, h *hmap, oldbucket uintptr) {
 						// 在迭代的时候可复现是必须的,因为搬运的决定和迭代器的决定要一致
 						// 幸运的是，我们可以对这种key随机分配，而且tophash也没有意义
 						// 使用随机的tophash是的这些key最终将平均分配到各个bucket
-						useY = top & 1
+
+						useY = top & 1 //50%的概率去上半区
 						top = tophash(hash)
 					} else {
+						// newbit是oldbucket的数量
+						// 扩容后hash会比原来多一位
+						// 两者做与运算后,很容易知道是上半区还是下半区
 						if hash&newbit != 0 {
 							useY = 1
 						}
@@ -768,7 +774,7 @@ func evacuate(t *maptype, h *hmap, oldbucket uintptr) {
 					dst.k = add(unsafe.Pointer(dst.b), dataOffset)
 					dst.e = add(dst.k, bucketCnt*uintptr(t.keysize))
 				}
-				dst.b.tophash[dst.i&(bucketCnt-1)] = top // mask dst.i as an optimization, to avoid a bounds check
+				dst.b.tophash[dst.i&(bucketCnt-1)] = top // 一个小优化，避免边界检查
 				if t.indirectkey() {
 					*(*unsafe.Pointer)(dst.k) = k2 // 拷贝指针
 				} else {
@@ -788,16 +794,17 @@ func evacuate(t *maptype, h *hmap, oldbucket uintptr) {
 				dst.e = add(dst.e, uintptr(t.elemsize))
 			}
 		}
-		// Unlink the overflow buckets & clear key/elem to help GC.
+		// 为GC，不在指向overflow和清空key/elem
 		if h.flags&oldIterator == 0 && t.bucket.ptrdata != 0 {
 			b := add(h.oldbuckets, oldbucket*uintptr(t.bucketsize))
-			// Preserve b.tophash because the evacuation
-			// state is maintained there.
+
+			//保护 b.tophash,因为迁移状态保存在那里
 			ptr := add(b, dataOffset)
 			n := uintptr(t.bucketsize) - dataOffset
 			memclrHasPointers(ptr, n)
 		}
 	}
+
 
 	if oldbucket == h.nevacuate {
 		advanceEvacuationMark(h, t, newbit)
@@ -805,9 +812,46 @@ func evacuate(t *maptype, h *hmap, oldbucket uintptr) {
 }
 ```
 
+```go
+func advanceEvacuationMark(h *hmap, t *maptype, newbit uintptr) {
+	h.nevacuate++
+
+	// magic number...
+	stop := h.nevacuate + 1024
+	if stop > newbit {
+		stop = newbit
+	}
+	for h.nevacuate != stop && bucketEvacuated(t, h, h.nevacuate) {
+		h.nevacuate++
+	}
+	if h.nevacuate == newbit { // newbit == # of oldbuckets
+		// 扩容结束，释放老的bucket array
+		h.oldbuckets = nil
+		// Can discard old overflow buckets as well.
+		// If they are still referenced by an iterator,
+		// then the iterator holds a pointers to the slice.
+		// 同时也可以丢弃老的overflow bucket
+		// 如果被迭代器引用，迭代器会持有指向overflow bucket的指针
+		if h.extra != nil {
+			h.extra.oldoverflow = nil
+		}
+		h.flags &^= sameSizeGrow
+	}
+}
+```
+
 ## map 的一些常见问题
 
-map 的 key 支持哪些类型？
+- map 的 key 支持哪些类型？
+
+  - 从语法层面上，只要是能够比较的类型，都可以作为 map 的 key
+  - 从逻辑层面:
+    - float 类型因为精度的问题(浮点数是以 IEEE754 标准存储的)，不建议作为 key，否则可能会有诡异的问题
+    - math.NaN()，在阅读扩容 相关的代码其实已经有提到，具体可以查看`runtime/alg.go`中的`f64hash`针对 NaN 的处理
+
+- map 是并发(goroutine)安全的吗?
+  - 不是，上文中很多代码都有并发检测，并发读写会 panic
+  - 如果要求并发安全，使用 go 标准库中的`sync.Map`或者自己封装一个带锁的 map
 
 ## 参考&推荐阅读
 
