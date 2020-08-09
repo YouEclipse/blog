@@ -1,5 +1,5 @@
 ---
-title: "用 github pages搭建静态博客 404 解决办法"
+title: "Javascript 实现转盘抽奖"
 date: 2015-04-19T19:56:46+08:00
 tags: ["html","javascript"]
 categories: ["javascript"]

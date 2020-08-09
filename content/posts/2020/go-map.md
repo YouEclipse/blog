@@ -178,8 +178,6 @@ func makemap(t *maptype, hint int, h *hmap) *hmap {
 }
 ```
 
-//TODO: maptype
-
 实际上，用哪个函数，还取决于**编译器逃逸分析的结果**，参考相关代码`cmd/compile/internal/gc/walk.go:1218`
 只有在 map 发生逃逸分配在堆上，且满足前面所说的的条件，才会调用`makemap_small`
 
