@@ -1,0 +1,638 @@
+baseURL = "https://blog.golang.im"
+#languageCode = "zh-CN"
+# [en, zh-CN, ...] determines default content language
+# [en, zh-CN, ...] 设置默认的语言
+defaultContentLanguage = "zh-cn" 
+# theme
+# 主题
+theme = "LoveIt"
+# themes directory
+# 主题目录
+#themesDir = "../.."
+
+# whether to use robots.txt
+# 是否使用 robots.txt
+enableRobotsTXT = true
+# whether to use git commit log
+# 是否使用 git 信息
+enableGitInfo = true
+# whether to use emoji code
+# 是否使用 emoji 代码
+enableEmoji = true
+
+
+
+[languages]
+  [languages.en]
+    weight = 1
+    # language code
+    languageCode = "en"
+    # website title
+    title = "Gopher's thoughts"
+    # language name
+    languageName = "English"
+    # whether to include Chinese/Japanese/Korean
+    hasCJKLanguage = false
+    # default amount of posts in each pages
+    paginate = 12
+    # [UA-XXXXXXXX-X] google analytics code
+    googleAnalytics = ""
+    # copyright description used only for seo schema
+    copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License."
+    # date format
+    dateFormatToUse = "2006-01-02"
+    # Menu Info
+    [languages.en.menu]
+      [[languages.en.menu.main]]
+        identifier = "posts"
+        name = "Posts"
+        url = "/posts/"
+        weight = 1
+      [[languages.en.menu.main]]
+        identifier = "tags"
+        name = "Tags"
+        url = "/tags/"
+        weight = 2
+      [[languages.en.menu.main]]
+        identifier = "categories"
+        name = "Categories"
+        url = "/categories/"
+        weight = 3
+      [[languages.en.menu.main]]
+        identifier = "about"
+        name = "About"
+        url = "/about/"
+        weight = 4
+      [languages.en.params]
+        # site description
+        description = "About LoveIt Theme"
+        # site keywords
+        keywords = ["Golang", "YouEclipse"]
+        # site default theme ("light", "dark", "auto")
+        defaultTheme = "dark"
+        # Home Page Info
+        [languages.en.params.home]
+          # Home Page Profile
+          [languages.en.params.home.profile]
+            enable = true
+            # Gravatar Email for preferred avatar in home page
+            gravatarEmail = ""
+            # URL of avatar shown in home page
+            avatarURL = "/images/avatar.png"
+            # subtitle shown in home page
+            subtitle = "A Clean, Elegant but Advanced Hugo Theme"
+            # whether to use typeit animation for subtitle
+            typeit = true
+            # whether to show social links
+            social = true
+          # Home Page Posts
+          [languages.en.params.home.posts]
+            enable = true
+            # special amount of posts in each home posts page
+            paginate = 6
+            # default behavior when you don't set "hiddenFromHomePage" in front matter
+            defaultHiddenFromHomePage = false
+        # Social Info in home page
+        [languages.en.params.social]
+          GitHub = "YouEclipse"
+          #Linkedin = "xxxx"
+          #Twitter = "xxxx"
+          #Instagram = "xxxx"
+          Email = "chuiyouwu@gmail.com"
+          Facebook = "chuiyouwu"
+          Telegram = "YouEclipse"
+          # Medium = "xxxx"
+          # Gitlab = "xxxx"
+          #Youtubelegacy = "xxxx"
+          # Youtubecustom = "xxxx"
+          # Youtubechannel = "xxxx"
+          # Tumblr ="xxxx"
+          # Quora = "xxxx"
+          # Keybase = "xxxx"
+          # Pinterest = "xxxx"
+          # Reddit = "xxxx"
+          # Codepen = "xxxx"
+          # FreeCodeCamp = "xxxx"
+          # Bitbucket = "xxxx"
+          # Stackoverflow = "xxxx"
+           Weibo = "yoyo940429"
+          # Odnoklassniki = "xxxx"
+          # VK = "xxxx"
+          # Flickr = "xxxx"
+          # Xing = "xxxx"
+          # Snapchat = "xxxx"
+          # Soundcloud = "xxxx"
+          # Spotify = "xxxx"
+          # Bandcamp = "xxxx"
+          # Paypal = "xxxx"
+          # Fivehundredpx = "xxxx"
+          # Mix = "xxxx"
+          # Goodreads = "xxxx"
+          # Lastfm = "xxxx"
+          # Foursquare = "xxxx"
+          # Hackernews = "xxxx"
+          # Kickstarter = "xxxx"
+          # Patreon = "xxxx"
+           Steam = "jiangzhangzhe"
+          # Twitch = "xxxx"
+          # Strava = "xxxx"
+          # Skype = "xxxx"
+          # Whatsapp = "xxxx"
+          # Zhihu = "xxxx"
+          # Douban = "xxxx"
+          # Angellist = "xxxx"
+          # Slidershare = "xxxx"
+          # Jsfiddle = "xxxx"
+          # Deviantart = "xxxx"
+          # Behance = "xxxx"
+          # Dribble = "xxxx"
+          # Wordpress = "xxxx"
+          # Vine = "xxxx"
+          # Googlescholar = "xxxx"
+          # Researchgate = "xxxx"
+          # Mastodon = "xxxx"
+          # MastodonPrefix = "https://mastodon.technology/"
+          # Thingiverse = "xxxx"
+          # Devto = "xxxx"
+          # Gitea = "xxxx"
+          # XMPP = "xxxx"
+          # Matrix = "xxxx"
+          # Bilibili = "xxxx"
+        # Social Share Links in post page
+        [languages.en.params.share]
+          enable = true
+          Twitter = true
+          Facebook = true
+          Linkedin = true
+          Whatsapp = true
+          Pinterest = true
+          # Tumblr = true
+          HackerNews = true
+          # Reddit = true
+          # VK = true
+          # Buffer = true
+          # Xing = true
+          # Line = true
+          # Instapaper = true
+          # Pocket = true
+          # Digg = true
+          # Stumbleupon = true
+          # Flipboard = true
+          # Weibo = true
+          # Renren = true
+          # Myspace = true
+          # Blogger = true
+          # Baidu = true
+          # Odnoklassniki = true
+          # Evernote = true
+          # Skype = true
+          # Trello = true
+          # Mix = true
+        # Comment Config
+        [languages.en.params.comment]
+          enable = true
+          # Disqus Comment Config (https://disqus.com/)
+          [languages.en.params.comment.disqus]
+            # Disqus shortname to use Disqus in posts
+            shortname = "https-blog-golang-im"
+          # Gittalk Comment Config (https://github.com/gitalk/gitalk)
+          [languages.en.params.comment.gitalk]
+            owner = ""
+            repo = ""
+            clientId = ""
+            clientSecret = ""
+          # Valine Comment Config (https://github.com/xCss/Valine)
+          [languages.en.params.comment.valine]
+            enable = false
+            appId = ""
+            appKey = ""
+            placeholder = "Your comment ..."
+            notify = false
+            verify = true
+            avatar = "mp"
+            # meta= ""
+            pageSize = 10
+            visitor = true
+            recordIP = true
+          # Facebook Comment Config (https://developers.facebook.com/docs/plugins/comments)
+          [languages.en.params.comment.facebook]
+            enable = false
+            width = "100%"
+            numPosts = 10
+            appId = ""
+            languageCode = "en_US"
+
+  [languages.zh-CN]
+    weight = 2
+    # 网站语言
+    languageCode = "zh-CN"
+    # 网站标题
+    title = "囊地鼠饲养员的碎碎念"
+    # 语言名称
+    languageName = "简体中文"
+    # 是否包括中日韩文字
+    hasCJKLanguage = true
+    # 默认每页列表显示的文章数目
+    paginate = 12
+    # [UA-XXXXXXXX-X] 谷歌分析代号
+    googleAnalytics = ""
+    # 版权描述，仅仅用于 SEO
+    copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License."
+    # 日期格式
+    dateFormatToUse = "2006-01-02"
+    # 菜单信息
+    [languages.zh-CN.menu]
+      [[languages.zh-CN.menu.main]]
+        identifier = "posts"
+        name = "文章"
+        url = "/posts/"
+        weight = 1
+      [[languages.zh-CN.menu.main]]
+        identifier = "tags"
+        name = "标签"
+        url = "/tags/"
+        weight = 2
+      [[languages.zh-CN.menu.main]]
+        identifier = "categories"
+        name = "分类"
+        url = "/categories/"
+        weight = 3
+      [[languages.zh-CN.menu.main]]
+        identifier = "about"
+        name = "关于"
+        url = "/about/"
+        weight = 4
+    [languages.zh-CN.params]
+      # 网站描述
+      description = "YouEclipse's Blog"
+      # 网站关键词
+      keywords = ["YouEclipse", "Hugo"]
+      # 网站默认主题 ("light", "dark", "auto")
+      defaultTheme = "dark"
+      # 主页信息设置
+      [languages.zh-CN.params.home]
+        # 主页个人信息
+        [languages.zh-CN.params.home.profile]
+          enable = true
+          # Gravatar 邮箱，用于优先在主页显示的头像
+          gravatarEmail = ""
+          # 主页显示头像的 URL
+          avatarURL = "/images/avatar.png"
+          # 主页显示的网站副标题
+          subtitle = "囊地鼠🐀饲养员,正在搞🐳鲸鱼货运和⛵帆船物流"
+          # 是否为副标题显示打字机动画
+          typeit = true
+          # 是否显示社交账号
+          social = true
+        # 主页文章列表
+        [languages.zh-CN.params.home.posts]
+          enable = true
+          # 主页每页显示文章数量
+          paginate = 6
+          # 当你没有在文章前面设置 "hiddenFromHomePage" 时的默认行为
+          defaultHiddenFromHomePage = false
+      # 主页的社交信息设置
+      [languages.zh-CN.params.social]
+        GitHub = "YouEclipse"
+        # Linkedin = "xxxx"
+        #Twitter = "xxxx"
+        #Instagram = "xxxx"
+        Email = "chuiyouwu@gmail.com"
+        Facebook = "chuiyouwu"
+        Telegram = "YouEclipse"
+        # Medium = "xxxx"
+        # Gitlab = "xxxx"
+        # Youtubelegacy = "xxxx"
+        # Youtubecustom = "xxxx"
+        # Youtubechannel = "xxxx"
+        # Tumblr ="xxxx"
+        # Quora = "xxxx"
+        # Keybase = "xxxx"
+        # Pinterest = "xxxx"
+        # Reddit = "xxxx"
+        # Codepen = "xxxx"
+        # FreeCodeCamp = "xxxx"
+        # Bitbucket = "xxxx"
+        # Stackoverflow = "xxxx"
+        Weibo = "yoyo940429"
+        # Odnoklassniki = "xxxx"
+        # VK = "xxxx"
+        # Flickr = "xxxx"
+        # Xing = "xxxx"
+        # Snapchat = "xxxx"
+        # Soundcloud = "xxxx"
+        # Spotify = "xxxx"
+        # Bandcamp = "xxxx"
+        # Paypal = "xxxx"
+        # Fivehundredpx = "xxxx"
+        # Mix = "xxxx"
+        # Goodreads = "xxxx"
+        # Lastfm = "xxxx"
+        # Foursquare = "xxxx"
+        # Hackernews = "xxxx"
+        # Kickstarter = "xxxx"
+        # Patreon = "xxxx"
+        Steam = "jiangzhangzhe"
+        # Twitch = "xxxx"
+        # Strava = "xxxx"
+        # Skype = "xxxx"
+        # Whatsapp = "xxxx"
+        #Zhihu = "xxxx"
+        # Douban = "xxxx"
+        # Angellist = "xxxx"
+        # Slidershare = "xxxx"
+        # Jsfiddle = "xxxx"
+        # Deviantart = "xxxx"
+        # Behance = "xxxx"
+        # Dribble = "xxxx"
+        # Wordpress = "xxxx"
+        # Vine = "xxxx"
+        # Googlescholar = "xxxx"
+        # Researchgate = "xxxx"
+        # Mastodon = "@xxxx"
+        # MastodonPrefix = "https://mastodon.technology/"
+        # Thingiverse = "xxxx"
+        # Devto = "xxxx"
+        # Gitea = "xxxx"
+        # XMPP = "xxxx@example.com"
+        # Matrix = "xxxx"
+        #Bilibili = "xxxx"
+      # 文章页面的分享信息设置
+      [languages.zh-CN.params.share]
+        enable = true
+        Twitter = true
+        Facebook = true
+        # Linkedin = true
+        # Whatsapp = true
+        # Pinterest = true
+        # Tumblr = true
+        # HackerNews = true
+        # Reddit = true
+        # VK = true
+        # Buffer = true
+        # Xing = true
+        # Line = true
+        # Instapaper = true
+        # Pocket = true
+        # Digg = true
+        # Stumbleupon = true
+        # Flipboard = true
+        Weibo = true
+        Renren = true
+        # Myspace = true
+        # Blogger = true
+        Baidu = true
+        # Odnoklassniki = true
+        Evernote = true
+        # Skype = true
+        # Trello = true
+        # Mix = true
+      # 评论系统设置
+      [languages.zh-CN.params.comment]
+        enable = true
+        # Disqus 评论系统设置 (https://disqus.com/)
+        [languages.zh-CN.params.comment.disqus]
+          # Disqus 的用户名，用来在文章中启用 Disqus 评论系统
+          shortname = "https-blog-golang-im"
+        # Gittalk 评论系统设置 (https://github.com/gitalk/gitalk)
+        [languages.zh-CN.params.comment.gitalk]
+          owner = ""
+          repo = ""
+          clientId = ""
+          clientSecret = ""
+        # Valine 评论系统设置 (https://github.com/xCss/Valine)
+        [languages.zh-CN.params.comment.valine]
+          enable = false
+          appId = ""
+          appKey = ""
+          placeholder = "你的评论 ..."
+          notify = false
+          verify = true
+          avatar = "mp"
+          # meta= ""
+          pageSize = 10
+          visitor = true
+          recordIP = true
+        # Facebook 评论系统设置 (https://developers.facebook.com/docs/plugins/comments)
+        [languages.zh-CN.params.comment.facebook]
+          enable = false
+          width = "100%"
+          numPosts = 10
+          appId = ""
+          languageCode = "en_US"
+
+[params]
+  # LoveIt theme version
+  # LoveIt 主题版本
+  version = "0.1.X"
+
+  # public git repo url only then enableGitInfo is true
+  # 公共 git 仓库路径，仅在 enableGitInfo 设为 true 时有效
+  gitRepo = "https://github.com/dillonzq/LoveIt"
+  # Header info
+  # 页面头部导航栏信息
+  [params.header]
+    # desktop header mode ("fixed", "normal", "auto")
+    # 桌面端导航栏模式 ("fixed", "normal", "auto")
+    desktopMode = "fixed"
+    # mobile header mode ("fixed", "normal", "auto")
+    # 移动端导航栏模式 ("fixed", "normal", "auto")
+    mobileMode = "auto"
+  # Footer Copyright Info
+  # 页面底部版权信息设置
+  [params.footer]
+    # Site creation time
+    # 网站创立年份
+    since = 2014
+    # ICP info only in China (HTML format is allowed)
+    # ICP 备案信息，仅在中国使用 (允许使用 HTML 格式)
+    icp = ""
+    # license info (HTML format is allowed)
+    # 许可协议信息 (允许使用 HTML 格式)
+    license= '<a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
+  # Page config
+  # 文章页面配置
+  [params.page]
+    # whether to use lightgallery in the page
+    # 是否在文章页面使用 lightgallery
+    lightgallery = true
+    # whether to show link to Raw Markdown content of the post
+    # 是否在文章页面显示原始 Markdown 文档链接
+    linkToMarkdown = true
+  # mathematical formulas (KaTeX)
+  # 数学公式 (KaTeX https://katex.org/)
+  [params.math]
+    enable = true
+    # default block delimiter is $$ ... $$ and \\[ ... \\]
+    # 默认块定界符是 $$ ... $$ 和 \\[ ... \\]
+    blockLeftDelimiter = ""
+    blockRightDelimiter = ""
+    # default inline delimiter is $ ... $ and \\( ... \\)
+    # 默认内联定界符是 $ ... $ 和 \\( ... \\)
+    inlineLeftDelimiter = ""
+    inlineRightDelimiter = ""
+    # KaTeX extension copy_tex
+    # KaTeX 插件 copy_tex
+    copyTex = true
+    # KaTeX extension mhchem
+    # KaTeX 插件 mhchem
+    mhchem = true
+  # site verification code for Google/Bing/Yandex/Pinterest/Baidu
+  # 网站验证代码，用于 Google/Bing/Yandex/Pinterest/Baidu
+  [params.verification]
+    google = ""
+    bing = ""
+    yandex = ""
+    pinterest = ""
+    baidu = ""
+  # Publisher Info just for SEO
+  # 出版者信息，仅用于 SEO
+  [params.publisher]
+    name = "YouEclipse"
+    [params.publisher.logo]
+      url = "logo.png"
+      width = 127
+      height = 40
+  # Website Log Info just for SEO
+  # 网站 Logo 信息，仅用于 SEO
+  [params.logo]
+    url = "logo.png"
+    width = 127
+    height = 40
+  # Website Image Info just for SEO
+  #  网站图标信息，仅用于 SEO
+  [params.image]
+    url = "cover.png"
+    width = 800
+    height = 600
+  # CSS and JS Files CDN
+  # CSS 和 JS 文件的 CDN 设置
+  [params.cdn]
+    # fontawesome-free@5.12.1 https://fontawesome.com/
+    fontawesomeFreeCSS = ''
+    # animate.css@3.7.2 https://github.com/daneden/animate.css
+    animateCSS = ''
+    # smooth-scroll@16.1.2 https://github.com/cferdinandi/smooth-scroll
+    smoothScrollJS = ''
+    # sharer@0.4.0 https://github.com/ellisonleao/sharer.js
+    sharerJS = ''
+    # lazysizes@5.2.0 https://github.com/aFarkas/lazysizes
+    lazysizesJS = ''
+    # lightgallery@1.1.3 lg-thumbnail@1.1.0 lg-zoom@1.1.0 https://github.com/sachinchoolur/lightgallery.js
+    lightgalleryCSS = ''
+    lightgalleryJS = ''
+    lightgalleryThumbnailJS = ''
+    lightgalleryZoomJS = ''
+    # typeit@6.5.1 https://github.com/alexmacarthur/typeit
+    typeitJS = ''
+    # katex@0.11.1 https://github.com/KaTeX/KaTeX
+    katexCSS = ''
+    katexJS = ''
+    katexAutoRenderJS = ''
+    katexCopyTexCSS = ''
+    katexCopyTexJS = ''
+    katexMhchemJS = ''
+    # mermaid@8.4.8 https://github.com/knsv/mermaid
+    mermaidJS = ''
+    # aplayer@1.10.1 https://github.com/MoePlayer/APlayer
+    aplayerCSS = ''
+    aplayerJS = ''
+    # meting@2.0.1 https://github.com/metowolf/MetingJS
+    metingJS = ''
+    # echarts@4.6.0 https://echarts.apache.org/
+    echartsJS = ''
+    echartsMacaronsJS = ''
+    # gitalk@1.6.0 https://github.com/gitalk/gitalk
+    gitalkCSS = ''
+    gitalkJS = ''
+    # valine@1.3.10 https://valine.js.org/
+    valineJS = ''
+
+# Markup related configuration in Hugo
+# Hugo 解析文档的配置
+[markup]
+  # Syntax Highlighting (https://gohugo.io/content-management/syntax-highlighting)
+  # 代码高亮设置 (https://gohugo.io/content-management/syntax-highlighting)
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    lineNoStart = 1
+    lineNos = true
+    lineNumbersInTable = true
+    noClasses = false
+    style = "monokai"
+    tabWidth = 4
+  # Goldmark is from Hugo 0.60 the default library used for Markdown
+  # Goldmark 是 Hugo 0.60 以来的默认 Markdown 解析库
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      definitionList = true
+      footnote = true
+      linkify = true
+      strikethrough = true
+      table = true
+      taskList = true
+      typographer = true
+    [markup.goldmark.renderer]
+      # whether to use HTML tags directly in the document
+      # 是否在文档中直接使用 HTML 标签
+      unsafe = true
+  # Table Of Contents settings
+  # 目录设置
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 6
+
+# Author Info
+# 作者信息
+[author]
+  name = "YouEclipse"
+  link = "https://github.com/YouEclipse"
+
+# Sitemap Info
+# 网站地图信息
+[sitemap]
+  changefreq = "weekly"
+  filename = "sitemap.xml"
+  priority = 0.5
+
+# Permalinks Info (https://gohugo.io/content-management/urls/#permalinks)
+# Permalinks 信息 (https://gohugo.io/content-management/urls/#permalinks)
+[Permalinks]
+  # posts = ":year/:month/:filename"
+  posts = ":filename"
+
+# Privacy Info (https://gohugo.io/about/hugo-and-gdpr/)
+# 隐私信息设置 (https://gohugo.io/about/hugo-and-gdpr/)
+[privacy]
+  [privacy.googleAnalytics]
+    anonymizeIP = true
+
+  [privacy.youtube]
+    privacyEnhanced = true
+
+# Options to make output .md files
+# 用于输出 Markdown 格式文档的设置
+[mediaTypes]
+  [mediaTypes."text/plain"]
+    suffixes = ["md"]
+
+# Options to make output .md files
+# 用于输出 Markdown 格式文档的设置
+[outputFormats.MarkDown]
+  mediaType = "text/plain"
+  isPlainText = true
+  isHTML = false
+
+# Options to make hugo output files
+# 用于 Hugo 输出文档的设置
+[outputs]
+  home = ["HTML", "RSS"]
+  page = ["HTML", "MarkDown"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML", "RSS"]
+  taxonomyTerm = ["HTML"]
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"

@@ -298,7 +298,7 @@ type DiscoveryInterface interface {
 
 ```
 
-可以看到它是由多个接口`组合`而成,不难看出就是 GVR 相关的接口。文件中还有一个带缓存的 DiscoverClient 的接口定义`CachedDiscoveryInterface`，它基于`DiscoveryInterface`组合而成，具体在 `client-go/discovery/disk`和`client-go/discovery/memory`中各有一个现实，一个基于磁盘，另一个则基于内存。
+可以看到它是由多个接口`组合`而成,不难看出就是 GVR 相关的接口。文件中还有一个带缓存的 DiscoverClient 的接口定义`CachedDiscoveryInterface`，它基于`DiscoveryInterface`组合而成，具体在 `client-go/discovery/disk`和`client-go/discovery/memory`中各有一个实现，一个基于磁盘，另一个则基于内存。
 
 > `discovery/cached/disk/cached_discovery.go`
 
@@ -469,7 +469,7 @@ type dynamicClient struct {
 
 `RestClient` 是最基础的客户端，它是 Clientset,DynamicClient,DiscoveryClient 的基础。Clientset 和 DynamicClient 两个客户端的作用类似，DiscoveryClient 则提供了发现 `kube-apiserv`GVR 的功能。用一个类图可以很好的体现他们之间的关系:
 
-<img src="./../../../static/images/blog/kubernetes-client-go-client-all.svg">
+<img src="./../../../static/svgs/kubernetes-client-go-client-all.svg">
 
 ## 参考
 

@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="1087.5px" preserveAspectRatio="none" style="width:1651px;height:1087px;background:#00000000;" version="1.1" viewBox="0 0 1651 1087" width="1651.0417px" zoomAndPan="magnify"><defs><linearGradient id="g6om961cw7gfx0" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stop-color="#FFFFFF"/><stop offset="100%" stop-color="#FFFFFF"/></linearGradient><filter height="300%" id="f6om961cw7gfx" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0833333333333335"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.166666666666667" dy="4.166666666666667" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter><linearGradient id="g6om961cw7gfx1" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stop-color="#4DABF5"/><stop offset="100%" stop-color="#2196F3"/></linearGradient><linearGradient id="g6om961cw7gfx2" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stop-color="#2196F3"/><stop offset="100%" stop-color="#1A78C2"/></linearGradient></defs><g><!--MD5=[719a84a7c4530e88604589351ba40795]
+cluster k8s.io/client-go/discovery--><rect fill="url(#g6om961cw7gfx0)" filter="url(#f6om961cw7gfx)" height="878.125" rx="4.1667" ry="4.1667" style="stroke: #9C27B0; stroke-width: 1.5625;" width="1626.0417" x="7.2917" y="191.6667"/><path d="M225,192.7083 L225,219.7591 L214.5833,230.1758 L7.2917,230.1758 " fill="none" style="stroke: #9C27B0; stroke-width: 1.5625;"/><text fill="#9C27B0" font-family="Verdana" font-size="12.5" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="186.4583" x="20.8333" y="214.7278">k8s.io/client-go/discovery</text><!--MD5=[6b9f8b32771f6197b83538f74803cf3c]
+cluster k8s.io/client-go/discovery/disk--><rect fill="url(#g6om961cw7gfx0)" filter="url(#f6om961cw7gfx)" height="116.6667" rx="4.1667" ry="4.1667" style="stroke: #9C27B0; stroke-width: 1.5625;" width="258.3333" x="626.0417" y="7.2917"/><path d="M878.125,8.3333 L878.125,35.3841 L867.7083,45.8008 L626.0417,45.8008 " fill="none" style="stroke: #9C27B0; stroke-width: 1.5625;"/><text fill="#9C27B0" font-family="Verdana" font-size="12.5" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="220.8333" x="639.5833" y="30.3528">k8s.io/client-go/discovery/disk</text><!--MD5=[2d1d23dbc71944d595813ba1909c57af]
+cluster k8s.io/client-go/discovery/memory--><rect fill="url(#g6om961cw7gfx0)" filter="url(#f6om961cw7gfx)" height="116.6667" rx="4.1667" ry="4.1667" style="stroke: #9C27B0; stroke-width: 1.5625;" width="286.4583" x="1001.0417" y="7.2917"/><path d="M1281.25,8.3333 L1281.25,35.3841 L1270.8333,45.8008 L1001.0417,45.8008 " fill="none" style="stroke: #9C27B0; stroke-width: 1.5625;"/><text fill="#9C27B0" font-family="Verdana" font-size="12.5" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="248.9583" x="1014.5833" y="30.3528">k8s.io/client-go/discovery/memory</text><!--MD5=[a02e4c7f2b158c291406ef7b0c640473]
+class ServerGroupsInterface--><rect fill="url(#g6om961cw7gfx1)" filter="url(#f6om961cw7gfx)" height="96.639" id="ServerGroupsInterface" rx="4.1667" ry="4.1667" style="stroke: #2196F3; stroke-width: 1.0416666666666667;" width="318.75" x="15.625" y="896.3542"/><rect fill="url(#g6om961cw7gfx2)" height="45.8008" rx="4.1667" ry="4.1667" style="stroke: url(#g6om961cw7gfx2); stroke-width: 1.0416666666666667;" width="318.75" x="15.625" y="896.3542"/><rect fill="url(#g6om961cw7gfx2)" height="4.1667" style="stroke: url(#g6om961cw7gfx2); stroke-width: 1.0416666666666667;" width="318.75" x="15.625" y="937.9883"/><rect fill="none" height="96.639" id="ServerGroupsInterface" rx="4.1667" ry="4.1667" style="stroke: #2196F3; stroke-width: 1.0416666666666667;" width="318.75" x="15.625" y="896.3542"/><ellipse cx="86.9792" cy="919.2546" fill="#B7161C" rx="10.4167" ry="10.4167" style="stroke: #B7161C; stroke-width: 1.0416666666666667;"/><path d="M83.8704,916.4225 L83.8704,914.8275 L89.2904,914.8275 L89.2904,916.4225 L87.4837,916.4225 L87.4837,922.347 L89.2904,922.347 L89.2904,923.9421 L83.8704,923.9421 L83.8704,922.347 L85.6771,922.347 L85.6771,916.4225 L83.8704,916.4225 Z "/><text fill="#FFFFFF" font-family="Verdana" font-size="12.5" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="146.875" x="117.1875" y="923.5819">ServerGroupsInterface</text><line style="stroke: #2196F3; stroke-width: 1.0416666666666667;" x1="16.6667" x2="333.3333" y1="942.1549" y2="942.1549"/><line style="stroke: #2196F3; stroke-width: 1.0416666666666667;" x1="16.6667" x2="333.3333" y1="950.4883" y2="950.4883"/><ellipse cx="27.0833" cy="961.9466" fill="#84BE84" rx="3.125" ry="3.125" style="stroke: #038048; stroke-width: 1.0416666666666667;"/><text fill="#FFFFFF" font-family="Verdana" font-size="11.4583" lengthAdjust="spacingAndGlyphs" textLength="271.875" x="45.8333" y="975.7075">ServerGroups() (*metav1.APIGroupList, error)</text><!--MD5=[da3b2beb02ed5c9f7a09c3d28f7b473b]
+class ServerResourcesInterface--><rect fill="url(#g6om961cw7gfx1)" filter="url(#f6om961cw7gfx)" height="233.3252" id="ServerResourcesInterface" rx="4.1667" ry="4.1667" style="stroke: #2196F3; stroke-width: 1.0416666666666667;" width="573.9583" x="371.3542" y="828.125"/><rect fill="url(#g6om961cw7gfx2)" height="45.8008" rx="4.1667" ry="4.1667" style="stroke: url(#g6om961cw7gfx2); stroke-width: 1.0416666666666667;" width="573.9583" x="371.3542" y="828.125"/><rect fill="url(#g6om961cw7gfx2)" height="4.1667" style="stroke: url(#g6om961cw7gfx2); stroke-width: 1.0416666666666667;" width="573.9583" x="371.3542" y="869.7591"/><rect fill="none" height="233.3252" id="ServerResourcesInterface" rx="4.1667" ry="4.1667" style="stroke: #2196F3; stroke-width: 1.0416666666666667;" width="573.9583" x="371.3542" y="828.125"/><ellipse cx="559.375" cy="851.0254" fill="#B7161C" rx="10.4167" ry="10.4167" style="stroke: #B7161C; stroke-width: 1.0416666666666667;"/><path d="M556.2663,848.1934 L556.2663,846.5983 L561.6862,846.5983 L561.6862,848.1934 L559.8796,848.1934 L559.8796,854.1178 L561.6862,854.1178 L561.6862,855.7129 L556.2663,855.7129 L556.2663,854.1178 L558.0729,854.1178 L558.0729,848.1934 L556.2663,848.1934 Z "/><text fill="#FFFFFF" font-family="Verdana" font-size="12.5" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="168.75" x="589.5833" y="855.3528">ServerResourcesInterface</text><line style="stroke: #2196F3; stroke-width: 1.0416666666666667;" x1="372.3958" x2="944.2708" y1="873.9258" y2="873.9258"/><line style="stroke: #2196F3; stroke-width: 1.0416666666666667;" x1="372.3958" x2="944.2708" y1="882.2591" y2="882.2591"/><ellipse cx="382.8125" cy="893.7174" fill="#84BE84" rx="3.125" ry="3.125" style="stroke: #038048; stroke-width: 1.0416666666666667;"/><text fill="#FFFFFF" font-family="Verdana" font-size="11.4583" lengthAdjust="spacingAndGlyphs" textLength="527.0833" x="401.5625" y="907.4783">ServerResourcesForGroupVersion(groupVersion string) (*metav1.APIResourceList, error)</text><ellipse cx="382.8125" cy="927.889" fill="#84BE84" rx="3.125" ry="3.125" style="stroke: #038048; stroke-width: 1.0416666666666667;"/><text fill="#FFFFFF" font-family="Verdana" font-size="11.4583" lengthAdjust="spacingAndGlyphs" textLength="317.7083" x="401.5625" y="941.6499">ServerResources() ([]*metav1.APIResourceList, error)</text><ellipse cx="382.8125" cy="962.0605" fill="#84BE84" rx="3.125" ry="3.125" style="stroke: #038048; stroke-width: 1.0416666666666667;"/><text fill="#FFFFFF" font-family="Verdana" font-size="11.4583" lengthAdjust="spacingAndGlyphs" textLength="508.3333" x="401.5625" y="975.8214">ServerGroupsAndResources() ([]*metav1.APIGroup, []*metav1.APIResourceList, error)</text><ellipse cx="382.8125" cy="996.2321" fill="#84BE84" rx="3.125" ry="3.125" style="stroke: #038048; stroke-width: 1.0416666666666667;"/><text fill="#FFFFFF" font-family="Verdana" font-size="11.4583" lengthAdjust="spacingAndGlyphs" textLength="373.9583" x="401.5625" y="1009.993">ServerPreferredResources() ([]*metav1.APIResourceList, error)</text><ellipse cx="382.8125" cy="1030.4036" fill="#84BE84" rx="3.125" ry="3.125" style="stroke: #038048; stroke-width: 1.0416666666666667;"/><text fill="#FFFFFF" font-family="Verdana" font-size="11.4583" lengthAdjust="spacingAndGlyphs" textLength="451.0417" x="401.5625" y="1044.1645">ServerPreferredNamespacedResources() ([]*metav1.APIResourceList, error)</text><!--MD5=[adc360acbbc3a7759b178d3b1ad96ad1]
+class ServerVersionInterface--><rect fill="url(#g6om961cw7gfx1)" filter="url(#f6om961cw7gfx)" height="96.639" id="ServerVersionInterface" rx="4.1667" ry="4.1667" style="stroke: #2196F3; stroke-width: 1.0416666666666667;" width="266.6667" x="982.2917" y="896.3542"/><rect fill="url(#g6om961cw7gfx2)" height="45.8008" rx="4.1667" ry="4.1667" style="stroke: url(#g6om961cw7gfx2); stroke-width: 1.0416666666666667;" width="266.6667" x="982.2917" y="896.3542"/><rect fill="url(#g6om961cw7gfx2)" height="4.1667" style="stroke: url(#g6om961cw7gfx2); stroke-width: 1.0416666666666667;" width="266.6667" x="982.2917" y="937.9883"/><rect fill="none" height="96.639" id="ServerVersionInterface" rx="4.1667" ry="4.1667" style="stroke: #2196F3; stroke-width: 1.0416666666666667;" width="266.6667" x="982.2917" y="896.3542"/><ellipse cx="1026.5625" cy="919.2546" fill="#B7161C" rx="10.4167" ry="10.4167" style="stroke: #B7161C; stroke-width: 1.0416666666666667;"/><path d="M1023.4538,916.4225 L1023.4538,914.8275 L1028.8737,914.8275 L1028.8737,916.4225 L1027.0671,916.4225 L1027.0671,922.347 L1028.8737,922.347 L1028.8737,923.9421 L1023.4538,923.9421 L1023.4538,922.347 L1025.2604,922.347 L1025.2604,916.4225 L1023.4538,916.4225 Z "/><text fill="#FFFFFF" font-family="Verdana" font-size="12.5" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="148.9583" x="1056.7708" y="923.5819">ServerVersionInterface</text><line style="stroke: #2196F3; stroke-width: 1.0416666666666667;" x1="983.3333" x2="1247.9167" y1="942.1549" y2="942.1549"/><line style="stroke: #2196F3; stroke-width: 1.0416666666666667;" x1="983.3333" x2="1247.9167" y1="950.4883" y2="950.4883"/><ellipse cx="993.75" cy="961.9466" fill="#84BE84" rx="3.125" ry="3.125" style="stroke: #038048; stroke-width: 1.0416666666666667;"/><text fill="#FFFFFF" font-family="Verdana" font-size="11.4583" lengthAdjust="spacingAndGlyphs" textLength="219.7917" x="1012.5" y="975.7075">ServerVersion() (*version.Info, error)</text><!--MD5=[521fdeaf4242fa40e13dd68e821a90f8]
+class OpenAPISchemaInterface--><rect fill="url(#g6om961cw7gfx1)" filter="url(#f6om961cw7gfx)" height="96.639" id="OpenAPISchemaInterface" rx="4.1667" ry="4.1667" style="stroke: #2196F3; stroke-width: 1.0416666666666667;" width="339.5833" x="1285.4167" y="896.3542"/><rect fill="url(#g6om961cw7gfx2)" height="45.8008" rx="4.1667" ry="4.1667" style="stroke: url(#g6om961cw7gfx2); stroke-width: 1.0416666666666667;" width="339.5833" x="1285.4167" y="896.3542"/><rect fill="url(#g6om961cw7gfx2)" height="4.1667" style="stroke: url(#g6om961cw7gfx2); stroke-width: 1.0416666666666667;" width="339.5833" x="1285.4167" y="937.9883"/><rect fill="none" height="96.639" id="OpenAPISchemaInterface" rx="4.1667" ry="4.1667" style="stroke: #2196F3; stroke-width: 1.0416666666666667;" width="339.5833" x="1285.4167" y="896.3542"/><ellipse cx="1358.3333" cy="919.2546" fill="#B7161C" rx="10.4167" ry="10.4167" style="stroke: #B7161C; stroke-width: 1.0416666666666667;"/><path d="M1355.2246,916.4225 L1355.2246,914.8275 L1360.6445,914.8275 L1360.6445,916.4225 L1358.8379,916.4225 L1358.8379,922.347 L1360.6445,922.347 L1360.6445,923.9421 L1355.2246,923.9421 L1355.2246,922.347 L1357.0313,922.347 L1357.0313,916.4225 L1355.2246,916.4225 Z "/><text fill="#FFFFFF" font-family="Verdana" font-size="12.5" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="164.5833" x="1388.5417" y="923.5819">OpenAPISchemaInterface</text><line style="stroke: #2196F3; stroke-width: 1.0416666666666667;" x1="1286.4583" x2="1623.9583" y1="942.1549" y2="942.1549"/><line style="stroke: #2196F3; stroke-width: 1.0416666666666667;" x1="1286.4583" x2="1623.9583" y1="950.4883" y2="950.4883"/><ellipse cx="1296.875" cy="961.9466" fill="#84BE84" rx="3.125" ry="3.125" style="stroke: #038048; stroke-width: 1.0416666666666667;"/><text fill="#FFFFFF" font-family="Verdana" font-size="11.4583" lengthAdjust="spacingAndGlyphs" textLength="292.7083" x="1315.625" y="975.7075">OpenAPISchema() (*openapi_v2.Document, error)</text><!--MD5=[fdaafd3e59c0842a4f88486c6725cec3]
+class DiscoveryInterface--><rect fill="url(#g6om961cw7gfx1)" filter="url(#f6om961cw7gfx)" height="96.639" id="DiscoveryInterface" rx="4.1667" ry="4.1667" style="stroke: #2196F3; stroke-width: 1.0416666666666667;" width="234.375" x="769.2708" y="567.7083"/><rect fill="url(#g6om961cw7gfx2)" height="45.8008" rx="4.1667" ry="4.1667" style="stroke: url(#g6om961cw7gfx2); stroke-width: 1.0416666666666667;" width="234.375" x="769.2708" y="567.7083"/><rect fill="url(#g6om961cw7gfx2)" height="4.1667" style="stroke: url(#g6om961cw7gfx2); stroke-width: 1.0416666666666667;" width="234.375" x="769.2708" y="609.3424"/><rect fill="none" height="96.639" id="DiscoveryInterface" rx="4.1667" ry="4.1667" style="stroke: #2196F3; stroke-width: 1.0416666666666667;" width="234.375" x="769.2708" y="567.7083"/><ellipse cx="811.9792" cy="590.6087" fill="#B7161C" rx="10.4167" ry="10.4167" style="stroke: #B7161C; stroke-width: 1.0416666666666667;"/><path d="M808.8704,587.7767 L808.8704,586.1816 L814.2904,586.1816 L814.2904,587.7767 L812.4837,587.7767 L812.4837,593.7012 L814.2904,593.7012 L814.2904,595.2962 L808.8704,595.2962 L808.8704,593.7012 L810.6771,593.7012 L810.6771,587.7767 L808.8704,587.7767 Z "/><text fill="#FFFFFF" font-family="Verdana" font-size="12.5" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="119.7917" x="842.1875" y="594.9361">DiscoveryInterface</text><line style="stroke: #2196F3; stroke-width: 1.0416666666666667;" x1="770.3125" x2="1002.6042" y1="613.5091" y2="613.5091"/><line style="stroke: #2196F3; stroke-width: 1.0416666666666667;" x1="770.3125" x2="1002.6042" y1="621.8424" y2="621.8424"/><ellipse cx="780.7292" cy="633.3008" fill="#84BE84" rx="3.125" ry="3.125" style="stroke: #038048; stroke-width: 1.0416666666666667;"/><text fill="#FFFFFF" font-family="Verdana" font-size="11.4583" lengthAdjust="spacingAndGlyphs" textLength="187.5" x="799.4792" y="647.0617">RESTClient() restclient.Interface</text><!--MD5=[ba1e42a0ca2ad2b6da0ab21081594ca5]
+class CachedDiscoveryInterface--><rect fill="url(#g6om961cw7gfx1)" filter="url(#f6om961cw7gfx)" height="130.8105" id="CachedDiscoveryInterface" rx="4.1667" ry="4.1667" style="stroke: #2196F3; stroke-width: 1.0416666666666667;" width="220.8333" x="901.0417" y="237.5"/><rect fill="url(#g6om961cw7gfx2)" height="45.8008" rx="4.1667" ry="4.1667" style="stroke: url(#g6om961cw7gfx2); stroke-width: 1.0416666666666667;" width="220.8333" x="901.0417" y="237.5"/><rect fill="url(#g6om961cw7gfx2)" height="4.1667" style="stroke: url(#g6om961cw7gfx2); stroke-width: 1.0416666666666667;" width="220.8333" x="901.0417" y="279.1341"/><rect fill="none" height="130.8105" id="CachedDiscoveryInterface" rx="4.1667" ry="4.1667" style="stroke: #2196F3; stroke-width: 1.0416666666666667;" width="220.8333" x="901.0417" y="237.5"/><ellipse cx="915.625" cy="260.4004" fill="#B7161C" rx="10.4167" ry="10.4167" style="stroke: #B7161C; stroke-width: 1.0416666666666667;"/><path d="M912.5163,257.5684 L912.5163,255.9733 L917.9362,255.9733 L917.9362,257.5684 L916.1296,257.5684 L916.1296,263.4928 L917.9362,263.4928 L917.9362,265.0879 L912.5163,265.0879 L912.5163,263.4928 L914.3229,263.4928 L914.3229,257.5684 L912.5163,257.5684 Z "/><text fill="#FFFFFF" font-family="Verdana" font-size="12.5" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="168.75" x="939.5833" y="264.7278">CachedDiscoveryInterface</text><line style="stroke: #2196F3; stroke-width: 1.0416666666666667;" x1="902.0833" x2="1120.8333" y1="283.3008" y2="283.3008"/><line style="stroke: #2196F3; stroke-width: 1.0416666666666667;" x1="902.0833" x2="1120.8333" y1="291.6341" y2="291.6341"/><ellipse cx="912.5" cy="303.0924" fill="#84BE84" rx="3.125" ry="3.125" style="stroke: #038048; stroke-width: 1.0416666666666667;"/><text fill="#FFFFFF" font-family="Verdana" font-size="11.4583" lengthAdjust="spacingAndGlyphs" textLength="70.8333" x="931.25" y="316.8533">Fresh() bool</text><ellipse cx="912.5" cy="337.264" fill="#84BE84" rx="3.125" ry="3.125" style="stroke: #038048; stroke-width: 1.0416666666666667;"/><text fill="#FFFFFF" font-family="Verdana" font-size="11.4583" lengthAdjust="spacingAndGlyphs" textLength="64.5833" x="931.25" y="351.0249">Invalidate()</text><!--MD5=[1cfe3ea1b8f788b7b78ce557e34aa1fd]
+class DiscoveryClient--><rect fill="url(#g6om961cw7gfx1)" filter="url(#f6om961cw7gfx)" height="62.4674" id="DiscoveryClient" rx="4.1667" ry="4.1667" style="stroke: #2196F3; stroke-width: 1.0416666666666667;" width="150" x="714.5833" y="271.875"/><rect fill="url(#g6om961cw7gfx2)" height="45.8008" rx="4.1667" ry="4.1667" style="stroke: url(#g6om961cw7gfx2); stroke-width: 1.0416666666666667;" width="150" x="714.5833" y="271.875"/><rect fill="url(#g6om961cw7gfx2)" height="4.1667" style="stroke: url(#g6om961cw7gfx2); stroke-width: 1.0416666666666667;" width="150" x="714.5833" y="313.5091"/><rect fill="none" height="62.4674" id="DiscoveryClient" rx="4.1667" ry="4.1667" style="stroke: #2196F3; stroke-width: 1.0416666666666667;" width="150" x="714.5833" y="271.875"/><ellipse cx="729.1667" cy="294.7754" fill="#FF7700" rx="10.4167" ry="10.4167" style="stroke: #2196F3; stroke-width: 1.0416666666666667;"/><path d="M728.1087,295.459 Q726.7578,294.9382 726.2695,294.3685 Q725.7813,293.7988 725.7813,292.8385 Q725.7813,291.6016 726.5788,290.9017 Q727.3763,290.1855 728.7598,290.1855 Q729.3945,290.1855 730.013,290.332 Q730.6478,290.4785 731.2663,290.7552 L731.2663,292.513 Q730.6803,292.1061 730.0781,291.8945 Q729.4922,291.6667 728.9063,291.6667 Q728.2552,291.6667 727.8971,291.9434 Q727.5553,292.2038 727.5553,292.6921 Q727.5553,293.0664 727.7995,293.3105 Q728.0599,293.5547 728.8574,293.8639 L729.6387,294.1569 Q730.7454,294.5475 731.25,295.2148 Q731.7708,295.8822 731.7708,296.8913 Q731.7708,298.2747 730.957,298.9583 Q730.1432,299.6419 728.4993,299.6419 Q727.8158,299.6419 727.1322,299.4792 Q726.4648,299.3164 725.8301,298.9909 L725.8301,297.1354 Q726.5462,297.6563 727.2135,297.9004 Q727.8971,298.1445 728.5482,298.1445 Q729.2155,298.1445 729.5736,297.8516 Q729.9479,297.5423 729.9479,297.0052 Q729.9479,296.5983 729.7038,296.2891 Q729.4596,295.9798 729.0039,295.8008 L728.1087,295.459 Z "/><text fill="#FFFFFF" font-family="Verdana" font-size="12.5" lengthAdjust="spacingAndGlyphs" textLength="97.9167" x="753.125" y="299.1028">DiscoveryClient</text><line style="stroke: #2196F3; stroke-width: 1.0416666666666667;" x1="715.625" x2="863.5417" y1="317.6758" y2="317.6758"/><line style="stroke: #2196F3; stroke-width: 1.0416666666666667;" x1="715.625" x2="863.5417" y1="326.0091" y2="326.0091"/><!--MD5=[841487058dcfffda8280a132836a8e95]
+class CachedDiscoveryClient--><rect fill="url(#g6om961cw7gfx1)" filter="url(#f6om961cw7gfx)" height="62.4674" id="CachedDiscoveryClient" rx="4.1667" ry="4.1667" style="stroke: #2196F3; stroke-width: 1.0416666666666667;" width="198.9583" x="655.7292" y="53.125"/><rect fill="url(#g6om961cw7gfx2)" height="45.8008" rx="4.1667" ry="4.1667" style="stroke: url(#g6om961cw7gfx2); stroke-width: 1.0416666666666667;" width="198.9583" x="655.7292" y="53.125"/><rect fill="url(#g6om961cw7gfx2)" height="4.1667" style="stroke: url(#g6om961cw7gfx2); stroke-width: 1.0416666666666667;" width="198.9583" x="655.7292" y="94.7591"/><rect fill="none" height="62.4674" id="CachedDiscoveryClient" rx="4.1667" ry="4.1667" style="stroke: #2196F3; stroke-width: 1.0416666666666667;" width="198.9583" x="655.7292" y="53.125"/><ellipse cx="670.3125" cy="76.0254" fill="#FF7700" rx="10.4167" ry="10.4167" style="stroke: #2196F3; stroke-width: 1.0416666666666667;"/><path d="M669.2546,76.709 Q667.9036,76.1882 667.4154,75.6185 Q666.9271,75.0488 666.9271,74.0885 Q666.9271,72.8516 667.7246,72.1517 Q668.5221,71.4355 669.9056,71.4355 Q670.5404,71.4355 671.1589,71.582 Q671.7936,71.7285 672.4121,72.0052 L672.4121,73.763 Q671.8262,73.3561 671.224,73.1445 Q670.638,72.9167 670.0521,72.9167 Q669.401,72.9167 669.043,73.1934 Q668.7012,73.4538 668.7012,73.9421 Q668.7012,74.3164 668.9453,74.5605 Q669.2057,74.8047 670.0033,75.1139 L670.7845,75.4069 Q671.8913,75.7975 672.3958,76.4648 Q672.9167,77.1322 672.9167,78.1413 Q672.9167,79.5247 672.1029,80.2083 Q671.2891,80.8919 669.6452,80.8919 Q668.9616,80.8919 668.278,80.7292 Q667.6107,80.5664 666.9759,80.2409 L666.9759,78.3854 Q667.6921,78.9063 668.3594,79.1504 Q669.043,79.3945 669.694,79.3945 Q670.3613,79.3945 670.7194,79.1016 Q671.0938,78.7923 671.0938,78.2552 Q671.0938,77.8483 670.8496,77.5391 Q670.6055,77.2298 670.1497,77.0508 L669.2546,76.709 Z "/><text fill="#FFFFFF" font-family="Verdana" font-size="12.5" lengthAdjust="spacingAndGlyphs" textLength="146.875" x="694.2708" y="80.3528">CachedDiscoveryClient</text><line style="stroke: #2196F3; stroke-width: 1.0416666666666667;" x1="656.7708" x2="853.6458" y1="98.9258" y2="98.9258"/><line style="stroke: #2196F3; stroke-width: 1.0416666666666667;" x1="656.7708" x2="853.6458" y1="107.2591" y2="107.2591"/><!--MD5=[43abe05523dbfc7a817ca31f9078b27a]
+class memCacheClient--><rect fill="url(#g6om961cw7gfx1)" filter="url(#f6om961cw7gfx)" height="62.4674" id="memCacheClient" rx="4.1667" ry="4.1667" style="stroke: #2196F3; stroke-width: 1.0416666666666667;" width="160.4167" x="1034.375" y="53.125"/><rect fill="url(#g6om961cw7gfx2)" height="45.8008" rx="4.1667" ry="4.1667" style="stroke: url(#g6om961cw7gfx2); stroke-width: 1.0416666666666667;" width="160.4167" x="1034.375" y="53.125"/><rect fill="url(#g6om961cw7gfx2)" height="4.1667" style="stroke: url(#g6om961cw7gfx2); stroke-width: 1.0416666666666667;" width="160.4167" x="1034.375" y="94.7591"/><rect fill="none" height="62.4674" id="memCacheClient" rx="4.1667" ry="4.1667" style="stroke: #2196F3; stroke-width: 1.0416666666666667;" width="160.4167" x="1034.375" y="53.125"/><ellipse cx="1048.9583" cy="76.0254" fill="#FF7700" rx="10.4167" ry="10.4167" style="stroke: #2196F3; stroke-width: 1.0416666666666667;"/><path d="M1047.9004,76.709 Q1046.5495,76.1882 1046.0612,75.6185 Q1045.5729,75.0488 1045.5729,74.0885 Q1045.5729,72.8516 1046.3704,72.1517 Q1047.168,71.4355 1048.5514,71.4355 Q1049.1862,71.4355 1049.8047,71.582 Q1050.4395,71.7285 1051.0579,72.0052 L1051.0579,73.763 Q1050.472,73.3561 1049.8698,73.1445 Q1049.2839,72.9167 1048.6979,72.9167 Q1048.0469,72.9167 1047.6888,73.1934 Q1047.347,73.4538 1047.347,73.9421 Q1047.347,74.3164 1047.5911,74.5605 Q1047.8516,74.8047 1048.6491,75.1139 L1049.4303,75.4069 Q1050.5371,75.7975 1051.0417,76.4648 Q1051.5625,77.1322 1051.5625,78.1413 Q1051.5625,79.5247 1050.7487,80.2083 Q1049.9349,80.8919 1048.291,80.8919 Q1047.6074,80.8919 1046.9238,80.7292 Q1046.2565,80.5664 1045.6217,80.2409 L1045.6217,78.3854 Q1046.3379,78.9063 1047.0052,79.1504 Q1047.6888,79.3945 1048.3398,79.3945 Q1049.0072,79.3945 1049.3652,79.1016 Q1049.7396,78.7923 1049.7396,78.2552 Q1049.7396,77.8483 1049.4954,77.5391 Q1049.2513,77.2298 1048.7956,77.0508 L1047.9004,76.709 Z "/><text fill="#FFFFFF" font-family="Verdana" font-size="12.5" lengthAdjust="spacingAndGlyphs" textLength="108.3333" x="1072.9167" y="80.3528">memCacheClient</text><line style="stroke: #2196F3; stroke-width: 1.0416666666666667;" x1="1035.4167" x2="1193.75" y1="98.9258" y2="98.9258"/><line style="stroke: #2196F3; stroke-width: 1.0416666666666667;" x1="1035.4167" x2="1193.75" y1="107.2591" y2="107.2591"/><!--MD5=[8459af5a63d0fe316ef987baaacb256a]
+link DiscoveryInterface to ServerGroupsInterface--><path d="M769.038,655.113 C658.9344,693.4316 491.0609,756.4738 353.125,828.125 C319.2363,845.7286 283.6928,868.1224 253.3483,888.5741 " fill="none" id="DiscoveryInterface-&gt;ServerGroupsInterface" style="stroke: #2196F3; stroke-width: 3.125;"/><polygon fill="#2196F3" points="241.9873,896.3031,249.4985,896.2325,252.3223,889.272,244.8111,889.3425,241.9873,896.3031" style="stroke: #2196F3; stroke-width: 3.125;"/><text fill="#222222" font-family="Verdana" font-size="12.5" lengthAdjust="spacingAndGlyphs" textLength="67.7083" x="583.3333" y="751.1861">composite</text><!--MD5=[fe0cc3369e6c4954d90fc4a265f641f7]
+link DiscoveryInterface to ServerResourcesInterface--><path d="M852.7977,664.6386 C825.0276,704.6453 784.3206,763.2894 747.3181,816.5968 " fill="none" id="DiscoveryInterface-&gt;ServerResourcesInterface" style="stroke: #2196F3; stroke-width: 3.125;"/><polygon fill="#2196F3" points="739.4844,827.8823,746.4712,825.124,746.6123,817.6137,739.6255,820.3721,739.4844,827.8823" style="stroke: #2196F3; stroke-width: 3.125;"/><text fill="#222222" font-family="Verdana" font-size="12.5" lengthAdjust="spacingAndGlyphs" textLength="67.7083" x="819.7917" y="751.1861">composite</text><!--MD5=[f2e81fda155c1fdbd1ad11f412e67a1f]
+link DiscoveryInterface to ServerVersionInterface--><path d="M920.2727,664.6386 C961.0617,723.1338 1029.6339,821.4725 1073.7344,884.7168 " fill="none" id="DiscoveryInterface-&gt;ServerVersionInterface" style="stroke: #2196F3; stroke-width: 3.125;"/><polygon fill="#2196F3" points="1081.672,896.0999,1081.5149,888.59,1074.5222,885.8466,1074.6793,893.3565,1081.672,896.0999" style="stroke: #2196F3; stroke-width: 3.125;"/><text fill="#222222" font-family="Verdana" font-size="12.5" lengthAdjust="spacingAndGlyphs" textLength="67.7083" x="1001.0417" y="751.1861">composite</text><!--MD5=[7d06d5d31fb98032e1a4775a340d3983]
+link DiscoveryInterface to OpenAPISchemaInterface--><path d="M976.9304,664.7677 C1054.6429,706.9316 1169.3686,770.1309 1267.7083,828.125 C1300.5055,847.4666 1336.0742,869.3594 1367.3282,888.9131 " fill="none" id="DiscoveryInterface-&gt;OpenAPISchemaInterface" style="stroke: #2196F3; stroke-width: 3.125;"/><polygon fill="#2196F3" points="1379.0806,896.2826,1375.9991,889.4322,1368.4904,889.642,1371.572,896.4924,1379.0806,896.2826" style="stroke: #2196F3; stroke-width: 3.125;"/><text fill="#222222" font-family="Verdana" font-size="12.5" lengthAdjust="spacingAndGlyphs" textLength="67.7083" x="1165.625" y="751.1861">composite</text><!--MD5=[0fe954b449c7a7795ea39e1f225ef82f]
+link CachedDiscoveryInterface to DiscoveryInterface--><path d="M990.8475,369.0868 C977.9054,408.7041 960.1975,459.8551 941.6667,504.1667 C934.6028,521.0579 926.19,538.9936 918.0873,555.4457 " fill="none" id="CachedDiscoveryInterface-&gt;DiscoveryInterface" style="stroke: #2196F3; stroke-width: 3.125;"/><polygon fill="#2196F3" points="911.9791,567.6956,918.4969,563.9617,917.557,556.5092,911.0392,560.2431,911.9791,567.6956" style="stroke: #2196F3; stroke-width: 3.125;"/><text fill="#222222" font-family="Verdana" font-size="12.5" lengthAdjust="spacingAndGlyphs" textLength="67.7083" x="966.6667" y="490.7694">composite</text><!--MD5=[2b2b4f2b31663f2b9b6190c75c7e18e5]
+link DiscoveryClient to DiscoveryInterface--><path d="M797.9147,334.6468 C808.5667,374.3844 827.9097,444.6941 846.875,504.1667 C851.4098,518.3871 856.5448,533.5186 861.5782,547.9092 " fill="none" id="DiscoveryClient-&gt;DiscoveryInterface" style="stroke: #2196F3; stroke-width: 3.125;"/><polygon fill="none" points="868.4658,545.5153,868.553,567.5877,854.7203,550.3873,868.4658,545.5153" style="stroke: #2196F3; stroke-width: 3.125;"/><text fill="#222222" font-family="Verdana" font-size="12.5" lengthAdjust="spacingAndGlyphs" textLength="67.7083" x="858.3333" y="490.7694">implement</text><!--MD5=[511faac31054f1a28a205ba5a2c921ae]
+link CachedDiscoveryClient to CachedDiscoveryInterface--><path d="M792.9273,115.6447 C818.5323,136.9491 853.1005,165.8621 883.3333,191.6667 C895.3395,201.9142 907.9277,212.7505 920.3294,223.481 " fill="none" id="CachedDiscoveryClient-&gt;CachedDiscoveryInterface" style="stroke: #2196F3; stroke-width: 3.125;"/><polygon fill="none" points="925.4972,218.3108,936.4607,237.468,915.9435,229.3291,925.4972,218.3108" style="stroke: #2196F3; stroke-width: 3.125;"/><text fill="#222222" font-family="Verdana" font-size="12.5" lengthAdjust="spacingAndGlyphs" textLength="67.7083" x="884.375" y="169.9361">implement</text><!--MD5=[611551d5b5a265dbefddbc5c4c1616ed]
+link CachedDiscoveryClient to DiscoveryInterface--><path d="M732.5623,115.9523 C719.2974,136.4456 703.824,164.3375 696.875,191.6667 C677.4802,267.9432 686.2763,290.7632 696.875,368.75 C701.08,399.6907 700.2415,409.2856 715.625,436.4583 C743.2471,485.2488 786.9864,530.9074 823.2909,563.9903 " fill="none" id="CachedDiscoveryClient-&gt;DiscoveryInterface" style="stroke: #2196F3; stroke-width: 3.125;"/><rect fill="#FFFFFF" height="10.4167" style="stroke: #2196F3; stroke-width: 1.5625;" width="10.4167" x="822.0204" y="562.3478"/><text fill="#222222" font-family="Verdana" font-size="12.5" lengthAdjust="spacingAndGlyphs" textLength="68.75" x="727.0833" y="423.0611">aggregate</text><!--MD5=[9fd6b81112079aef361cf2e3012be6c6]
+link memCacheClient to CachedDiscoveryInterface--><path d="M1082.2169,115.7583 C1073.8776,125.1472 1065.5299,135.8855 1059.375,146.875 C1047.3109,168.4151 1037.9122,193.3634 1030.7606,216.9148 " fill="none" id="memCacheClient-&gt;CachedDiscoveryInterface" style="stroke: #2196F3; stroke-width: 3.125;"/><polygon fill="none" points="1037.7295,219.0679,1025.044,237.1309,1023.6965,215.0996,1037.7295,219.0679" style="stroke: #2196F3; stroke-width: 3.125;"/><text fill="#222222" font-family="Verdana" font-size="12.5" lengthAdjust="spacingAndGlyphs" textLength="67.7083" x="1070.8333" y="169.9361">implement</text><!--MD5=[8a07210cf73d72a961ef8c41fab2887c]
+link memCacheClient to DiscoveryInterface--><path d="M1139.2827,115.7718 C1145.3572,125.2423 1151.0183,136.0198 1154.1667,146.875 C1168.2457,195.4185 1193.182,210.4525 1140.625,368.75 C1118.1249,436.5184 1104.1381,453.1602 1054.1667,504.1667 C1033.9675,524.7842 1009.3849,543.7358 985.3371,559.9564 " fill="none" id="memCacheClient-&gt;DiscoveryInterface" style="stroke: #2196F3; stroke-width: 3.125;"/><polygon fill="#2196F3" points="973.9715,567.4531,981.4829,567.49,984.406,560.5705,976.8945,560.5336,973.9715,567.4531" style="stroke: #2196F3; stroke-width: 3.125;"/><text fill="#222222" font-family="Verdana" font-size="12.5" lengthAdjust="spacingAndGlyphs" textLength="67.7083" x="1140.625" y="423.0611">composite</text><!--MD5=[e8f56d32df7a8be813f95c5137c6fd81]
+@startuml kubernetes-client-go-discovery
+!include https://raw.githubusercontent.com/bschwarz/puml-themes/master/themes/materia/puml-theme-materia.puml
+
+package k8s.io/client-go/discovery <<Frame>> {
+    interface ServerGroupsInterface{
+	    + ServerGroups() (*metav1.APIGroupList, error)
+    }
+
+	interface ServerResourcesInterface{
+        + ServerResourcesForGroupVersion(groupVersion string) (*metav1.APIResourceList, error)
+	    + ServerResources() ([]*metav1.APIResourceList, error)
+	    + ServerGroupsAndResources() ([]*metav1.APIGroup, []*metav1.APIResourceList, error)
+	    + ServerPreferredResources() ([]*metav1.APIResourceList, error)
+	    + ServerPreferredNamespacedResources() ([]*metav1.APIResourceList, error)
+    }
+	interface ServerVersionInterface{
+        + ServerVersion() (*version.Info, error)
+    }
+
+	interface OpenAPISchemaInterface{
+        + OpenAPISchema() (*openapi_v2.Document, error)
+    }
+    interface  DiscoveryInterface   {
+	    + RESTClient() restclient.Interface 
+    }
+    interface CachedDiscoveryInterface{
+        + Fresh() bool
+	    + Invalidate()
+    }
+
+    class DiscoveryClient << (S,#FF7700) >>{
+
+    }
+DiscoveryInterface - -* ServerGroupsInterface:composite
+DiscoveryInterface - -* ServerResourcesInterface:composite
+DiscoveryInterface - -* ServerVersionInterface:composite
+DiscoveryInterface - -* OpenAPISchemaInterface:composite
+
+
+CachedDiscoveryInterface- -*DiscoveryInterface:composite
+
+DiscoveryClient - -|> DiscoveryInterface:implement 
+}
+
+package k8s.io/client-go/discovery/disk <<Frame>>{
+    class CachedDiscoveryClient << (S,#FF7700) >> {
+    }
+CachedDiscoveryClient - -|> CachedDiscoveryInterface:implement
+CachedDiscoveryClient - -# DiscoveryInterface:aggregate
+}
+
+package k8s.io/client-go/discovery/memory <<Frame>> { 
+    class memCacheClient << (S,#FF7700) >> {
+    }
+    memCacheClient - -|>CachedDiscoveryInterface:implement
+    memCacheClient - -* DiscoveryInterface:composite
+}
+@enduml
+
+@startuml kubernetes-client-go-discovery
+
+
+
+skinparam backgroundColor transparent
+
+
+
+
+
+
+
+skinparam defaultFontName       "Verdana"
+skinparam defaultFontSize       12
+skinparam dpi                   100
+skinparam shadowing             true
+skinparam roundcorner           8
+skinparam ParticipantPadding    40
+skinparam BoxPadding            40
+skinparam Padding               10
+skinparam ArrowColor            #666
+skinparam stereotype {
+    CBackgroundColor #fff
+    CBorderColor #cccccc
+    ABackgroundColor #70bf73
+    ABorderColor #3D8C40
+    IBackgroundColor #B7161C
+    IBorderColor #b7161c
+    EBackgroundColor #ffad33
+    EBorderColor #CC7A00
+    NBackgroundColor #b052c0
+    NBorderColor #7D1F8D
+}
+skinparam title {
+	FontColor	                 #2196F3
+	BorderColor	                 #cccccc
+	FontSize	    	         20
+	BorderRoundCorner            8
+	BorderThickness 	         1
+	BackgroundColor              #fff-#fff
+}
+
+skinparam legend {
+	BackgroundColor #fff
+	BorderColor #cccccc
+	FontColor #222
+}
+
+
+skinparam activity {
+		FontColor #FFF
+	BorderColor #2196F3
+	BackgroundColor #4dabf5-#2196F3
+	BarColor #4CAF50
+	StartColor #9C27B0
+	EndColor #9C27B0
+	DiamondBackgroundColor #FFF-#fff
+  	DiamondBorderColor #cccccc
+	DiamondFontColor #222
+}
+
+
+skinparam participant {
+		FontColor #FFF
+	BorderColor #2196F3
+	BackgroundColor #4dabf5-#2196F3
+	ParticipantBorderThickness 2
+}
+
+
+skinparam actor {
+		FontColor #FFF
+	BorderColor #2196F3
+	BackgroundColor #4dabf5-#2196F3
+	FontColor #222
+}
+
+
+skinparam arrow {
+	Thickness 3
+	Color #2196F3
+	FontColor #222
+}
+
+
+skinparam sequence {
+	BorderColor #2196F3
+	TitleFontColor #2196F3
+	BackgroundColor transparent
+	StartColor #2196F3
+	EndColor #2196F3
+	BoxBackgroundColor #fff
+	BoxBorderColor #666
+	BoxFontColor #222
+	LifeLineBorderColor #cccccc
+	LifeLineBorderThickness 2
+	LifeLineBackgroundColor #fff
+	GroupBorderColor #666
+	GroupFontColor #222
+	GroupHeaderFontColor #9C27B0
+	DividerBackgroundColor #FFF-#fff
+    DividerBorderColor #666
+    DividerBorderThickness 2
+    DividerFontColor #222
+	ReferenceBackgroundColor transparent
+	ReferenceBorderColor #666
+	ReferenceFontColor #222
+	ReferenceHeaderFontColor #9C27B0
+}
+
+
+skinparam partition {
+	BorderColor #2196F3
+	FontColor #2196F3
+	BackgroundColor transparent
+}
+
+
+skinparam collections {
+		FontColor #FFF
+	BorderColor #2196F3
+	BackgroundColor #4dabf5-#2196F3
+}
+
+
+skinparam control {
+		FontColor #FFF
+	BorderColor #2196F3
+	BackgroundColor #4dabf5-#2196F3
+	FontColor #222
+}
+
+
+skinparam entity {
+		FontColor #FFF
+	BorderColor #2196F3
+	BackgroundColor #4dabf5-#2196F3
+	FontColor #222
+}
+
+
+skinparam boundary {
+		FontColor #FFF
+	BorderColor #2196F3
+	BackgroundColor #4dabf5-#2196F3
+	FontColor #222
+}
+
+
+skinparam agent {
+	BackgroundColor #orange
+	BorderColor #999999
+	FontColor #333333
+}
+
+
+skinparam note {
+	BorderThickness 1
+	BackgroundColor #b052c0-#9C27B0
+	BorderColor #9C27B0
+	FontColor #FFF
+}
+
+
+skinparam artifact {
+	BackgroundColor #FFF-#fff
+	BorderColor #666
+	FontColor #666
+}
+
+
+skinparam component {
+		FontColor #FFF
+	BorderColor #2196F3
+	BackgroundColor #4dabf5-#2196F3
+}
+
+
+skinparam interface {
+	BackgroundColor  #B7161C
+	BorderColor  #e51c23
+	FontColor #222
+}
+
+
+skinparam storage {
+	BackgroundColor #ffad33-#ff9800
+  	BorderColor #ff9800
+	FontColor #FFF
+}
+
+
+skinparam node {
+	BackgroundColor #fff-#fff
+	BorderColor #222
+	FontColor #222
+}
+
+
+skinparam cloud {
+	BackgroundColor #F2FCFE-#eeeeee
+	BorderColor #F2FCFE
+	FontColor #222
+}
+
+
+skinparam database {
+		FontColor #FFF
+	BorderColor #2196F3
+	BackgroundColor #4dabf5-#2196F3
+	FontColor #222
+}
+
+
+skinparam class {
+		FontColor #FFF
+	BorderColor #2196F3
+	BackgroundColor #4dabf5-#2196F3
+	HeaderBackgroundColor #2196F3-#1a78c2
+	StereotypeFontColor #222
+	BorderThickness 1
+	AttributeFontColor #fff
+	AttributeFontSize 11
+}
+
+
+skinparam object {
+		FontColor #FFF
+	BorderColor #2196F3
+	BackgroundColor #4dabf5-#2196F3
+	StereotypeFontColor #222
+	BorderThickness 1
+	AttributeFontColor #222
+	AttributeFontSize 11
+}
+
+
+skinparam usecase {
+		FontColor #FFF
+	BorderColor #2196F3
+	BackgroundColor #4dabf5-#2196F3
+	BorderThickness 2
+	StereotypeFontColor #2196F3
+}
+
+
+skinparam rectangle {
+	FontColor #2196F3
+	BackgroundColor #fff-#fff
+	BorderThickness 2
+	StereotypeFontColor #2196F3
+}
+
+
+skinparam package {
+		FontColor #FFF
+	BorderColor #2196F3
+	BackgroundColor #4dabf5-#2196F3
+	BackgroundColor #fff-#fff
+	BorderThickness 2
+}
+
+
+skinparam folder {
+	BackgroundColor #FFF-#fff
+  	BorderColor #ff9800
+	FontColor #ff9800
+	BorderThickness 2
+}
+
+
+skinparam frame {
+	BackgroundColor #FFF-#fff
+  	BorderColor #9C27B0
+	FontColor #9C27B0
+	BorderThickness 2
+}
+
+
+skinparam state {
+		FontColor #FFF
+	BorderColor #2196F3
+	BackgroundColor #4dabf5-#2196F3
+	StartColor #9C27B0
+	EndColor #9C27B0
+	AttributeFontColor #222
+	AttributeFontSize 11
+}
+
+
+skinparam queue {
+		FontColor #FFF
+	BorderColor #2196F3
+	BackgroundColor #4dabf5-#2196F3
+}
+
+
+skinparam card {
+	BackgroundColor #b052c0-#9C27B0
+	BorderColor #9C27B0
+	FontColor #FFF
+}
+
+
+skinparam file {
+	BackgroundColor #fff-#fff
+	BorderColor #666
+	FontColor #666
+
+}
+
+
+
+package k8s.io/client-go/discovery <<Frame>> {
+    interface ServerGroupsInterface{
+	    + ServerGroups() (*metav1.APIGroupList, error)
+    }
+
+	interface ServerResourcesInterface{
+        + ServerResourcesForGroupVersion(groupVersion string) (*metav1.APIResourceList, error)
+	    + ServerResources() ([]*metav1.APIResourceList, error)
+	    + ServerGroupsAndResources() ([]*metav1.APIGroup, []*metav1.APIResourceList, error)
+	    + ServerPreferredResources() ([]*metav1.APIResourceList, error)
+	    + ServerPreferredNamespacedResources() ([]*metav1.APIResourceList, error)
+    }
+	interface ServerVersionInterface{
+        + ServerVersion() (*version.Info, error)
+    }
+
+	interface OpenAPISchemaInterface{
+        + OpenAPISchema() (*openapi_v2.Document, error)
+    }
+    interface  DiscoveryInterface   {
+	    + RESTClient() restclient.Interface 
+    }
+    interface CachedDiscoveryInterface{
+        + Fresh() bool
+	    + Invalidate()
+    }
+
+    class DiscoveryClient << (S,#FF7700) >>{
+
+    }
+DiscoveryInterface - -* ServerGroupsInterface:composite
+DiscoveryInterface - -* ServerResourcesInterface:composite
+DiscoveryInterface - -* ServerVersionInterface:composite
+DiscoveryInterface - -* OpenAPISchemaInterface:composite
+
+
+CachedDiscoveryInterface- -*DiscoveryInterface:composite
+
+DiscoveryClient - -|> DiscoveryInterface:implement 
+}
+
+package k8s.io/client-go/discovery/disk <<Frame>>{
+    class CachedDiscoveryClient << (S,#FF7700) >> {
+    }
+CachedDiscoveryClient - -|> CachedDiscoveryInterface:implement
+CachedDiscoveryClient - -# DiscoveryInterface:aggregate
+}
+
+package k8s.io/client-go/discovery/memory <<Frame>> { 
+    class memCacheClient << (S,#FF7700) >> {
+    }
+    memCacheClient - -|>CachedDiscoveryInterface:implement
+    memCacheClient - -* DiscoveryInterface:composite
+}
+@enduml
+
+PlantUML version 1.2020.15(Sun Jun 28 11:39:45 UTC 2020)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>
