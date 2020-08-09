@@ -16,13 +16,10 @@ ADD https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo${HU
 RUN tar -xf /tmp/hugo${HUGO_EXTENDED}_${HUGO_VERSION}_Linux-64bit.tar.gz -C   /usr/local/bin/
 
 
-
 ARG GIT_REPOSITORY=https://github.com/YouEclipse/blog.git
 ARG GIT_REPOSITORY_NAME=blog
 
-RUN apk --no-cache add git
-
-
+WORKDIR /tmp
 
 RUN git clone  ${GIT_REPOSITORY} 
 
