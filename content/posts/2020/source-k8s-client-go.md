@@ -435,7 +435,7 @@ func (d *memCacheClient) refreshLocked() error {
 
 `k8s.io/client-go/discovery` 包中的接口和结构体的关系相对复杂，这里用一个类图可以很很好地理清楚他们之间的关系
 
-<img src="./../../../static/images/blog/kubernetes-client-go-discovery.svg">
+![](/svgs/kubernetes-client-go-discovery.svg)
 
 ### ClientSet
 
@@ -467,10 +467,10 @@ type dynamicClient struct {
 
 ## 总结
 
-`RestClient` 是最基础的客户端，它是 Clientset,DynamicClient,DiscoveryClient 的基础。Clientset 和 DynamicClient 两个客户端的作用类似，DiscoveryClient 则提供了发现 `kube-apiserv`GVR 的功能。用一个类图可以很好的体现他们之间的关系:
+`RestClient` 是最基础的客户端，它是 Clientset,DynamicClient,DiscoveryClient 的基础。Clientset 和 DynamicClient 两个客户端的作用类似，DiscoveryClient 则提供了发现 `kube-apiserv`GVR 的功能。用一个类图可以很好的体现他们之间的关系(图片比较大,可以右键新窗口打开):
 
-<img src="./../../../static/svgs/kubernetes-client-go-client-all.svg">
 
+![](/svgs/kubernetes-client-go-client-all.svg)
 ## 参考
 
 [服务异常重试机制-指数退避算法](https://www.jianshu.com/p/6b7d6f62f6e3)
