@@ -27,7 +27,7 @@ draft: false
 
 ## 概览
 
-如果我们要使用 Go 基于 k8s 做二次开发，那么`client-go`是必不可少的依赖库,它封装了所有 与`kube-apiserver`交互的操作，可以理解成 `kube-apiserver` 的 sdk。
+我们在使用 Go 基于 k8s 做二次开发时，`client-go`是必不可少的依赖库,它封装了所有 与`kube-apiserver`交互的操作，可以理解成 `kube-apiserver` 的 sdk。
 
 > 在我们拉取 kubernetes 主仓库源码时,在`vendor/k8s.io` 目录下有一个 client-go,这个 `client-go` 是通过 `git subtree` 方式引用 [kubernetes/client-go](https://github.com/kubernetes/client-go) 的,从历史提交记录来看，我猜测它应该在在`go moudle`诞生之前作为 vendor 依赖包用的,而目前 kubernetes 已支持 `go module`,`go.mod` 中则通过`replace`引用 `staging/`目录下的`k8s.io/client-go`,stage 目录下的该包会定时同步到 [kubernetes/client-go](https://github.com/kubernetes/client-go)。不过，这些都不重要，无论哪里的代码，只要是同一个版本，其实都是一样的代码。
 
@@ -371,7 +371,7 @@ func (d *CachedDiscoveryClient) getCachedFile(filename string) ([]byte, error) {
 
 > `discovery/cached/disk/round_tripper.go`
 
-另外，如果`CachedDiscoveryClient` 还封装了 Go 原生的`http.RoundTripper`,支持了符合[HTTP 标准](https://tools.ietf.org/html/rfc7234)的 HTTP cache,需要在程序启动时指定 `--cache-dir` flag。
+另外，`CachedDiscoveryClient` 还封装了 Go 原生的`http.RoundTripper`,支持了符合[HTTP 标准](https://tools.ietf.org/html/rfc7234)的 HTTP cache,需要在程序启动时指定 `--cache-dir` flag。
 
 > `discovery/cached/memory/memcache.go`
 
@@ -469,8 +469,8 @@ type dynamicClient struct {
 
 `RestClient` 是最基础的客户端，它是 Clientset,DynamicClient,DiscoveryClient 的基础。Clientset 和 DynamicClient 两个客户端的作用类似，DiscoveryClient 则提供了发现 `kube-apiserv`GVR 的功能。用一个类图可以很好的体现他们之间的关系(图片比较大,可以右键新窗口打开):
 
-
 ![](/svgs/kubernetes-client-go-client-all.svg)
+
 ## 参考
 
 [服务异常重试机制-指数退避算法](https://www.jianshu.com/p/6b7d6f62f6e3)
