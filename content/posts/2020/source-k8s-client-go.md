@@ -12,18 +12,21 @@ draft: false
 
 本系列文章将参考郑东旭老师《Kubernetes 源码剖析》一书的目录结构阅读。
 
-文中涉及代码及版本为
+{{< admonition type=tip title="文中涉及代码及版本为" open=true >}}
 
 > ```shell
 > git clone -b tags/kubernetes-1.18.6 https://github.com/kubernetes/client-go.git --depth=1
 > ```
+{{< /admonition >}}
 
-如涉及到编译和 Go 语言相关,Go 语言版本为
+{{< admonition type=tip title="如涉及到编译和 Go 语言相关" open=true >}}
+
 
 > ```shell
 > ➜ go version
 > go version go1.14.6 linux/amd64
 > ```
+{{< /admonition >}}
 
 ## 概览
 
@@ -467,10 +470,10 @@ type dynamicClient struct {
 
 ## 总结
 
-`RestClient` 是最基础的客户端，它是 Clientset,DynamicClient,DiscoveryClient 的基础。Clientset 和 DynamicClient 两个客户端的作用类似，DiscoveryClient 则提供了发现 `kube-apiserv`GVR 的功能。用一个类图可以很好的体现他们之间的关系(图片比较大,可以右键新窗口打开):
+`RestClient` 是最基础的客户端，它是 `Clientset`,`DynamicClient`,`DiscoveryClient` 的基础。Clientset 和 DynamicClient 两个客户端的作用类似，DiscoveryClient 则提供了发现 `kube-apiserv`GVR 的功能。用一个类图可以很好的体现他们之间的关系(图片比较大,可以右键新窗口打开):
 
 ![](/svgs/kubernetes-client-go-client-all.svg)
 
 ## 参考
 
-[服务异常重试机制-指数退避算法](https://www.jianshu.com/p/6b7d6f62f6e3)
+[《Kubernetes 源码剖析》](https://weread.qq.com/web/reader/f1e3207071eeeefaf1e138akc81322c012c81e728d9d180)

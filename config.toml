@@ -257,13 +257,13 @@ mobileMode = "auto"
 [params.header.title]
 # URL of the LOGO
 # LOGO 的 URL
-logo = ""
+logo = "/svgs/gopher-front.svg"
 # title name
 # 标题名称
 name = "囊地鼠饲养员的碎碎念"
 # you can add extra information before the name (HTML format is supported), such as icons
 # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
-pre = "🐹"
+pre = ""
 # you can add extra information after the name (HTML format is supported), such as icons
 # 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
 post = ""
@@ -277,7 +277,7 @@ typeit = false
 enable = true
 # Custom content (HTML format is supported)
 # 自定义内容 (支持 HTML 格式)
-custom = 'Running on ☸️Kubernetes'
+custom = 'Running on  <a href="https://kubernetes.io/">☸️Kubernetes</a>'
 # whether to show Hugo and theme info
 # 是否显示 Hugo 和主题信息
 hugo = true
