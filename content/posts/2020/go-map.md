@@ -10,6 +10,8 @@ draft: false
 
 这是我第一次写源码分析的文章，在写这篇文章之前，我阅读过一些写的很好 Go 源码分析的文章，比如本文参考的曹春辉老师的[golang-notes](https://github.com/cch123/golang-notes/blob/master/map.md)和饶大的[码农桃花源](https://qcrao91.gitbook.io/go/map)系列。但是，而随之时间的推移，Go 版本迭代，源码还是会有一些细微的变动；再者，我认为看别人的文章，不如自己写一篇理解地深刻。 珠玉在前，本文难免有不足，望见谅。
 
+<!--more-->
+
 由于大部分的 Go 程序跑在 linux 下，因此平台相关的代码也以 `linux/amd64` 为准，
 这是我在阅读源码时的 go 版本
 

@@ -9,6 +9,7 @@ draft: false
 ## 前言
 
 近期在做`Kubernetes`和`Istio`微服务治理的落地项目，随着项目的推进，working on learning，对于`Kubernetes`和`Istio`算是入了门。机缘巧合之下，加入了[云原生社区](https://cloudnative.to/)的 Kubernetes 源码研习社，一起学习 kubernetes 源码,希望能对于 Kubernetes 有更加深入的理解。
+<!--more-->
 
 本系列文章将参考郑东旭老师《Kubernetes 源码剖析》一书的目录结构阅读。
 
