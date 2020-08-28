@@ -144,7 +144,34 @@ type SharedIndexInformer interface {
 	AddIndexers(indexers Indexers) error
 	GetIndexer() Indexer
 }
+
+`sharedIndexInformer`则是对应的实现
+type sharedIndexInformer struct {
+	//资源的本地存储，并且自带索引
+	indexer    Indexer
+	//包装了Reflector
+	controller Controller
+	//DeltaFIFO的消费者
+	processor             *sharedProcessor
+	cacheMutationDetector MutationDetector
+	listerWatcher ListerWatcher
+	// 表示这个informer是某一种资源的对象
+	objectType runtime.Object
+
+	// 同步周期
+	resyncCheckPeriod time.Duration
+	// 通过AddEventHandler添加的事件的默认同步周期
+	defaultEventHandlerResyncPeriod time.Duration
+	clock clock.Clock
+	// informer开始和结束的标识
+	started, stopped bool
+	startedLock      sync.Mutex
+	blockDeltas sync.Mutex
+}
+
 ```
+
+其中的`sharedProcessor` 将事件回调 handler 处理成`processorListener`,将会真正调用事件回调 handler.
 
 ### Informer 的创建
 
@@ -174,7 +201,8 @@ type sharedInformerFactory struct {
 
 ```
 
-接下来，示例在创建 pod 的 `Informer` 时，最终调用的是`sharedInformerFactory`的`InformerFor`
+接下来，示例在创建 pod 的 `Informer` 时，最终调用的是`sharedInformerFactory`的`InformerFor`，
+其中就实现了`sharedInformer`的共享机制。
 
 ```go
 func (f *sharedInformerFactory) InformerFor(obj runtime.Object, newFunc internalinterfaces.NewInformerFunc) cache.SharedIndexInformer {
@@ -183,7 +211,7 @@ func (f *sharedInformerFactory) InformerFor(obj runtime.Object, newFunc internal
 	defer f.lock.Unlock()
 
 	//如果已经创建过了，则返回，不在创建
-	//这也就是为什么成为sharedInformer，同一个资源的Informer只
+	//这也就是为什么称为sharedInformer，同一个资源的Informer只
 	//实例化一次，后续都复用同一个，可以减少对apiserver的压力
 	informerType := reflect.TypeOf(obj)
 	informer, exists := f.informers[informerType]
@@ -324,7 +352,7 @@ sharedIndexInformer
 
 ### Reflector 的核心逻辑
 
-`Reflector`监控资源的核心逻辑是`ListAndWatch`，这里真正调用了`ListerWacher`的`List`和`Watch`方法，并做了很多优化，以减少对 apiserver 的压力。
+`Reflector`监控资源的核心逻辑是`ListAndWatch`，这里真正调用了`ListerWacher`的`List`和`Watch`方法，将 indexer 中的资源对象同步到`DeltaFIFO`， 并做了很多优化，以减少对 apiserver 的压力。
 
 ```go
 func (r *Reflector) ListAndWatch(stopCh <-chan struct{}) error {
@@ -650,7 +678,7 @@ func (s *sharedIndexInformer) HandleDeltas(obj interface{}) error {
 	s.blockDeltas.Lock()
 	defer s.blockDeltas.Unlock()
 
-	//从旧到新便利Delta数组
+	//从旧到新遍历Delta数组
 	for _, d := range obj.(Deltas) {
 		switch d.Type {
 		case Sync, Replaced, Added, Updated:
@@ -664,7 +692,6 @@ func (s *sharedIndexInformer) HandleDeltas(obj interface{}) error {
 				isSync := false
 				switch {
 				case d.Type == Sync:
-					// Sync events are only propagated to listeners that requested resync
 					//同步的时间只会通知给请求同步的listener
 					isSync = true
 				case d.Type == Replaced:
@@ -674,14 +701,17 @@ func (s *sharedIndexInformer) HandleDeltas(obj interface{}) error {
 						}
 					}
 				}
+				// 通过distribute方法将资源对象通知给sharedInformer
 				s.processor.distribute(updateNotification{oldObj: old, newObj: d.Object}, isSync)
 			} else {
+				// 不存在则添加到indexer
 				if err := s.indexer.Add(d.Object); err != nil {
 					return err
 				}
 				s.processor.distribute(addNotification{newObj: d.Object}, false)
 			}
 		case Deleted:
+			//从indexer删除
 			if err := s.indexer.Delete(d.Object); err != nil {
 				return err
 			}
@@ -693,6 +723,17 @@ func (s *sharedIndexInformer) HandleDeltas(obj interface{}) error {
 
 ```
 
+## Indexer
+
+## 总结
+
 ## 参考
 
 [《Kubernetes 源码剖析》](https://weread.qq.com/web/reader/f1e3207071eeeefaf1e138akc81322c012c81e728d9d180)
+
+## TODO
+
+- sharedinformer 结构
+- processor
+- indexer
+- 图
