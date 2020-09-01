@@ -3,7 +3,7 @@ FROM alpine:latest AS builder
 LABEL maintainer=chuiyouwu@gmail.com
 
 
-ARG HUGO_VERSION=0.68.3
+ARG HUGO_VERSION=0.74.3
 ARG HUGO_EXTENDED=_extended
 
 
