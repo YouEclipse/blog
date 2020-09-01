@@ -76,7 +76,8 @@ DelayingInterface o-- RateLimitingInterface : 组合
 
 Type ..|>Interface:实现
 delayingType..|>DelayingInterface:实现
-rateLimitingType..|>RateLimitingInterface:实现
+rateLimitingType ..|> RateLimitingInterface:实现
+
 {{< /mermaid >}}
 
 ## 实现
@@ -147,7 +148,7 @@ func (q *Type) Get() (item interface{}, shutdown bool) {
     //加锁
 	q.cond.L.Lock()
     defer q.cond.L.Unlock()
-    //如果队列中没有数据且没关闭，会阻塞,知道有元素加入队列
+    //如果队列中没有数据且没关闭，会阻塞,直到有元素加入队列
 	for len(q.queue) == 0 && !q.shuttingDown {
 		q.cond.Wait()
     }
@@ -348,6 +349,212 @@ func (q *delayingType) waitingLoop() {
 }
 ```
 
-这段代码中有使用到一个`waitForPriorityQueue`的优先级队列，它是基于二叉堆实现的，二叉堆是用来实现优先级队列的最常见的数据结构.优先级队列最主要的性质就是父节点的值总是大于(小于)或者等于它的每一个子节点的值，并且在取出数据或能够自动排序.
+这段代码中有使用到一个`waitForPriorityQueue`的优先级队列，它是基于二叉堆实现的，二叉堆是用来实现优先级队列的最常见的数据结构.优先级队列最主要的性质就是父节点的值总是大于(小于)或者等于它的每一个子节点的值，并且在取出或者添加数据或能够依然维持这个性质.
 
 ### 限速队列
+
+限速队列主要用在一些需要重试的场景，根据错误的次数逐渐增加等待时间.从接口定义上看，限速队列在延时队列的基础上，新增了限速相关的功能：
+
+> `util/workqueue/rate_limiting_queue.go`
+
+```go
+type RateLimitingInterface interface {
+    //延时队列
+	DelayingInterface
+
+    // 限速之后添加一个元素
+	AddRateLimited(item interface{})
+    // 元素已经结束重试，无论是成功还是失败都会停止限速，这个元素会被抛弃
+	Forget(item interface{})
+    // 返回元素重新入队的次数
+	NumRequeues(item interface{}) int
+}
+
+```
+
+与之对应的实现则是`rateLimitingType`,
+
+```go
+type rateLimitingType struct {
+	DelayingInterface
+
+	rateLimiter RateLimiter
+}
+```
+
+关于`rateLimitingType`,最重要的就是`rateLimiter`,它的定义也是个接口:
+
+> `util/workqueue/default_rate_limiters.go`
+
+```go
+type RateLimiter interface {
+    // 获取元素等待的时间
+	When(item interface{}) time.Duration
+    // 元素已经结束重试，无论是成功还是失败都会停止限速，这个元素会被抛弃
+    Forget(item interface{})
+    // 返回元素重新入队的次数
+	NumRequeues(item interface{}) int
+}
+```
+
+针对`RateLimiter`，client-go 中有五种基于不同算法的实现：
+
+- BucketRateLimiter:令牌桶算法,基于`golang.org/x/time/rate`实现
+- ItemBucketRateLimiter：令牌桶算法,与 BucketRateLimiter 的区别是每个元素使用独立的限速器
+- ItemExponentialFailureRateLimiter：指数退避算法
+- ItemFastSlowRateLimiter：计数器算法
+- MaxOfRateLimiter:混合模式算法，多种限速算法混合使用
+
+#### BucketRateLimiter
+
+令牌桶算法是限流的最常见的算法那，它的原理就是系统以一个很定的速度往桶里放令牌，每当有一个元素需要加入队列，需要从桶里获得令牌，只有拥有令牌的元素才能入队，而没有令牌的元素，则只能等待。这样就能通过控制令牌的发放速率来控制入队的速率。
+
+```go
+type BucketRateLimiter struct {
+	*rate.Limiter
+}
+
+func (r *BucketRateLimiter) When(item interface{}) time.Duration {
+    //返回等待的时间
+	return r.Limiter.Reserve().Delay()
+}
+
+func (r *BucketRateLimiter) NumRequeues(item interface{}) int {
+    //不存在重新入队的情况
+	return 0
+}
+
+func (r *BucketRateLimiter) Forget(item interface{}) {
+    //没有重试机制
+}
+```
+
+`BucketRateLimiter`简单封装了 go 官方开发的`golang.org/x/time/rate`包，调用`when`方法，`r.Limiter.Reserve().Delay()`返回等待时间.
+
+#### ItemBucketRateLimiter
+
+```go
+type ItemBucketRateLimiter struct {
+	r     rate.Limit
+	burst int
+
+	limitersLock sync.Mutex
+	limiters     map[interface{}]*rate.Limiter
+}
+```
+
+`ItemBucketRateLimiter`同样是基于`golang.org/x/time/rate`，与`ItemBucketRateLimiter`的区别是它是针对每个元素单独启用一个限流器.
+
+#### ItemExponentialFailureRateLimiter
+
+```go
+type ItemExponentialFailureRateLimiter struct {
+    failuresLock sync.Mutex
+    //元素入队失败的次数
+	failures     map[interface{}]int
+    //最初的延迟
+    baseDelay time.Duration
+    //最大的延迟
+	maxDelay  time.Duration
+}
+```
+
+`ItemExponentialFailureRateLimiter`使用元素的入队失败次数作为指数，随着失败次数的增加,重新入队的等待间隔也越来越长，但不会超过 `maxDelay`.通过这种方式来限制相同元素的入队速率.其算法实现在`When`函数中：
+
+```go
+func (r *ItemExponentialFailureRateLimiter) When(item interface{}) time.Duration {
+	r.failuresLock.Lock()
+	defer r.failuresLock.Unlock()
+
+    //获取当前元素的失败次数
+	exp := r.failures[item]
+	r.failures[item] = r.failures[item] + 1
+
+    //计算指数 2^exp*baseDelay
+    backoff := float64(r.baseDelay.Nanoseconds()) * math.Pow(2, float64(exp))
+    //如果int64溢出了使用maxDelay
+	if backoff > math.MaxInt64 {
+		return r.maxDelay
+	}
+
+    calculated := time.Duration(backoff)
+    // 超过了maxDelay也使用maxDelay
+	if calculated > r.maxDelay {
+		return r.maxDelay
+	}
+
+	return calculated
+}
+```
+
+#### ItemFastSlowRateLimiter
+
+```go
+type ItemFastSlowRateLimiter struct {
+    failuresLock sync.Mutex
+    //失败次数
+	failures     map[interface{}]int
+
+    //快速重试的阈值
+    maxFastAttempts int
+    //短延迟
+    fastDelay       time.Duration
+    //长延迟
+	slowDelay       time.Duration
+}
+```
+
+`ItemFastSlowRateLimiter` 和`ItemExponentialFailureRateLimiter` 有些类似，它也是根据入队失败次数使用不同的延迟，只是在达到一定阈值(maxFastAttempts)前使用较低的延迟，在超过阈值后使用较高的延迟.它的实现如下：
+
+```go
+
+func (r *ItemFastSlowRateLimiter) When(item interface{}) time.Duration {
+	r.failuresLock.Lock()
+	defer r.failuresLock.Unlock()
+    //错误次数+1
+	r.failures[item] = r.failures[item] + 1
+    //低于阈值使用短延迟
+	if r.failures[item] <= r.maxFastAttempts {
+		return r.fastDelay
+	}
+
+	return r.slowDelay
+}
+```
+
+#### MaxOfRateLimiter
+
+```go
+type MaxOfRateLimiter struct {
+	limiters []RateLimiter
+}
+
+```
+
+`MaxOfRateLimiter`的结构是一个`RateLimiter`的 Slice，也就是说，它实际上可以使多种`RateLimiter`实现的组合，在`workqueue`包中`DefaultControllerRateLimiter`使用的就是`MaxOfRateLimiter`,需要注意的是，在调用`When`和`NumRequeues`时，他都是以其中的最大值为准，如`When`:
+
+```go
+func (r *MaxOfRateLimiter) When(item interface{}) time.Duration {
+	ret := time.Duration(0)
+	for _, limiter := range r.limiters {
+
+        curr := limiter.When(item)
+        //如果等待时间比上一个大，则使用当前的等待时间
+        if curr > ret {
+			ret = curr
+		}
+	}
+
+	return ret
+}
+```
+
+## 总结
+
+通用队列，延迟队列和限速队列充分利用了 go 的接口和结构体组合的特性，并在实现过程中使用了队列，堆等基础的数据结构。通用队列的实现中使用`sync.cond`来唤醒等待的 goroutine 也值得学习，可以说 workqueue 非常好的利用 go 语言的特性与思想。
+
+## 参考
+
+[《Kubernetes 源码剖析》](https://weread.qq.com/web/reader/f1e3207071eeeefaf1e138akc81322c012c81e728d9d180)
+
+[WorkQueue](https://www.qikqiak.com/k8strain/k8s-code/client-go/workqueue/#_1)

@@ -36,7 +36,7 @@ draft: false
 
 > 源自《Kubernetes 源码剖析》
 
-```go
+````go
 package main
 
 import (
@@ -84,10 +84,7 @@ func main() {
 			oObj := obj.(v1.Object)
 			log.Printf("Pod Delete from Store: %s", oObj.GetName())
 		},
-	})
-	informer.Run(stopCh)
-}
-```
+	})WorkQueue
 
 {{< /admonition >}}
 
@@ -103,7 +100,7 @@ func main() {
 2020/08/18 23:39:22 test Pod Update to Store: test
 ...
 2020/08/18 23:40:08 Pod Delete from Store: test
-```
+````
 
 `informer`是如何做到感知资源的变化的呢？带着这个问题，本文将深入源码，理解它的实现。
 
@@ -731,9 +728,9 @@ func (s *sharedIndexInformer) HandleDeltas(obj interface{}) error {
 
 [《Kubernetes 源码剖析》](https://weread.qq.com/web/reader/f1e3207071eeeefaf1e138akc81322c012c81e728d9d180)
 
-## TODO
+<!-- ## TODO
 
 - sharedinformer 结构
 - processor
 - indexer
-- 图
+- 图 -->
