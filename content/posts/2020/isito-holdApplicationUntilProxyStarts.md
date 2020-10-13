@@ -4,7 +4,7 @@ date: 2020-08-27T23:43:20+08:00
 tags: ["istio", "go"]
 categories: ["istio", "go"]
 draft: false
-featuredImage: "/images/blog/sidecar-lifecycle.png"
+featuredImagePreview: "/images/blog/sidecar-lifecycle.png"
 ---
 
 ## 前言
