@@ -137,7 +137,26 @@ spec:
 
 实际上,为了解决 sidecar 启动顺序的问题,`Kubernetes`官方在 1.18 之后特别引入了`sidecar container lifecycle`的概念,也就是说,通过对k8s配置对应的 lifecycle，就能确保 sidecar container 在应用容器启动之前启动。
 
+
 {{< image src="/images/blog/sidecar-lifecycle-2.gif" caption="kubernetes1.18之后容器生命周期(图源自 https://banzaicloud.com)" >}}
+
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: bookings-v1-b54bc7c9c-v42f6
+  labels:
+    app: demoapp
+spec:
+  containers:
+  - name: bookings
+    image: banzaicloud/allspark:0.1.1
+    ...
+  - name: istio-proxy
+    image: docker.io/istio/proxyv2:1.4.3
+    lifecycle:
+      type: Sidecar
+```
 
 
 但是，升级 `Kubernetes`的版本是有一定风险的，而且当时 istio 官方也并未支持这个feature，所以，这个方式目前并不行得通。
