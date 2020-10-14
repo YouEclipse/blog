@@ -254,6 +254,17 @@ func injectContainers(target []corev1.Container, sic *SidecarInjectionSpec) []co
 
 还有部分修改就是修改 sidecar pod 模板，添加`values.global.proxy.holdApplicationUntilProxyStarts`的判断，如果为`true`，则在对应的 lifecycle 的`postStart` 添加 `pilot-agent wait`命令.
 
+```yaml
+  {{- else if .Values.global.proxy.holdApplicationUntilProxyStarts}}
+    lifecycle:
+      postStart:
+        exec:
+          command:
+          - pilot-agent
+          - wait
+  {{- end }}
+```
+
 ## 总结
 
 看完`Istio1.7`的代码，我们会发现，`holdApplicationUntilProxyStarts`的实现方式其实就是目前通用的解决方案之一的优化版本，而且将对`envoy`健康检查的逻辑集成到了 `pilot-agent`。这个实现虽然依然不太优雅，但是为了解决现有的一大痛点和向下兼容低版本的`Kubernetes`，这也是情理之中的。可以预见的是，在不远的将来，大部分的`kubernetes`用户的升级到 1.18 后，`Istio` 官方必然会废弃这个现实，使用更加优雅的`sidecar container lifecycle` 来实现。
