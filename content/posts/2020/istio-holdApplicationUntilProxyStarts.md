@@ -1,5 +1,5 @@
 ---
-title: "Isito 1.7 是如何保证sidecar的启动顺序的"
+title: "Istio 1.7 是如何保证sidecar的启动顺序的"
 date: 2020-08-27T23:43:20+08:00
 tags: ["istio", "go"]
 categories: ["istio", "go"]
